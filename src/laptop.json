@@ -1,0 +1,60 @@
+{
+    "name": "choosing a laptop",
+    "description": "laptop",
+    "id": "30895f37-ee1f-4ee5-be8a-26d76fb182b8",
+    "criteria": [
+        {
+            "name": "price",
+            "weight": 9.0,
+            "id": "2c54ae5a-7af9-4185-b833-0145b1c235f0"
+        },
+        {
+            "name": "weight",
+            "weight": 7.0,
+            "id": "511cbe79-9a98-42d5-b554-8191a7b5b655"
+        },
+        {
+            "name": "battery life",
+            "weight": 10.0,
+            "id": "b12db3b0-3d2d-4a10-af70-f1cdfb9a0a12"
+        }
+    ],
+    "options": [
+        {
+            "name": "mac",
+            "scores": {
+                "2c54ae5a-7af9-4185-b833-0145b1c235f0": 7.0,
+                "511cbe79-9a98-42d5-b554-8191a7b5b655": 8.0,
+                "b12db3b0-3d2d-4a10-af70-f1cdfb9a0a12": 10.0
+            },
+            "id": "0640d744-2a8a-433c-88e0-afef449e0781"
+        },
+        {
+            "name": "asus",
+            "scores": {
+                "2c54ae5a-7af9-4185-b833-0145b1c235f0": 9.0,
+                "511cbe79-9a98-42d5-b554-8191a7b5b655": 5.0,
+                "b12db3b0-3d2d-4a10-af70-f1cdfb9a0a12": 6.0
+            },
+            "id": "530cdf99-8050-468a-ac72-c72c076f22d9"
+        },
+        {
+            "name": "acer",
+            "scores": {
+                "2c54ae5a-7af9-4185-b833-0145b1c235f0": 9.0,
+                "511cbe79-9a98-42d5-b554-8191a7b5b655": 8.0,
+                "b12db3b0-3d2d-4a10-af70-f1cdfb9a0a12": 10.0
+            },
+            "id": "b203d7e2-e4e3-4cf1-a55d-11e30425aec7"
+        },
+        {
+            "name": "lenova",
+            "scores": {
+                "2c54ae5a-7af9-4185-b833-0145b1c235f0": 9.0,
+                "511cbe79-9a98-42d5-b554-8191a7b5b655": 8.0,
+                "b12db3b0-3d2d-4a10-af70-f1cdfb9a0a12": 9.0
+            },
+            "id": "4701a020-2925-4d89-a026-810446e3b690"
+        }
+    ]
+}
