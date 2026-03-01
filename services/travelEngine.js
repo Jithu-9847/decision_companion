@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
+const csv = require('csv-parser');
+const { createObjectCsvWriter } = require('csv-writer');
 
-const DATA_PATH = path.join(__dirname, '../data/destinations.json');
+const DATA_PATH = path.join(__dirname, '../data/destinations.csv');
 
 const questionsPool = [
     { key: 'adventure_level', message: 'On a scale of 1-5, how much adventure and thrill are you seeking?' },
@@ -38,17 +40,60 @@ const questionsPool = [
 ];
 
 function loadDestinations() {
-    try {
-        const rawData = fs.readFileSync(DATA_PATH, 'utf-8');
-        return JSON.parse(rawData);
-    } catch (e) {
-        console.error("System Error: Could not load destinations data.");
-        process.exit(1);
-    }
+    return new Promise((resolve, reject) => {
+        const results = [];
+        fs.createReadStream(DATA_PATH)
+            .pipe(csv())
+            .on('data', (data) => {
+                const name = data.name;
+                const specialties = data.specialties ? data.specialties.split('|') : [];
+                const budget_needed = [parseInt(data.budget_needed_min), parseInt(data.budget_needed_max)];
+                const adjustmentsCount = parseInt(data.adjustmentsCount) || 0;
+                const features = {};
+                for (const q of questionsPool) {
+                    features[q.key] = parseFloat(data[q.key]) || 3.0;
+                }
+                results.push({ name, specialties, budget_needed, features, adjustmentsCount });
+            })
+            .on('end', () => resolve(results))
+            .on('error', (err) => reject(err));
+    });
 }
 
 function saveDestinations(data) {
-    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), 'utf-8');
+    return new Promise((resolve, reject) => {
+        const header = [
+            { id: 'name', title: 'name' },
+            { id: 'specialties', title: 'specialties' },
+            { id: 'budget_needed_min', title: 'budget_needed_min' },
+            { id: 'budget_needed_max', title: 'budget_needed_max' },
+            ...questionsPool.map(q => ({ id: q.key, title: q.key })),
+            { id: 'adjustmentsCount', title: 'adjustmentsCount' }
+        ];
+
+        const csvWriter = createObjectCsvWriter({
+            path: DATA_PATH,
+            header: header
+        });
+
+        const records = data.map(item => {
+            const record = {
+                name: item.name,
+                specialties: item.specialties.join('|'),
+                budget_needed_min: item.budget_needed[0],
+                budget_needed_max: item.budget_needed[1],
+                adjustmentsCount: item.adjustmentsCount || 0
+            };
+            for (const q of questionsPool) {
+                record[q.key] = item.features[q.key];
+            }
+            return record;
+        });
+
+        csvWriter.writeRecords(records)
+            .then(() => resolve())
+            .catch(err => reject(err));
+    });
 }
 
 // Selects N random unique elements from an array
@@ -58,10 +103,46 @@ function getRandomQuestions(array, num) {
 }
 
 async function runTravelEngine() {
-    const destinations = loadDestinations();
+    const destinations = await loadDestinations();
 
     console.log("Welcome to your one and only Travel Decision Companion \n");
-    console.log("Let's figure out your next perfect vacation. I will ask you 10 questions.");
+
+    // Mandatory Questions
+    const mandatoryQuestions = [
+        {
+            type: 'input',
+            name: 'country',
+            message: 'Where do you want to travel? Enter country (or type "any"):',
+            default: 'any'
+        },
+        {
+            type: 'input',
+            name: 'state',
+            message: 'Enter state or region (or type "any"):',
+            default: 'any'
+        },
+        {
+            type: 'input',
+            name: 'budget',
+            message: 'What is your expected total budget (in USD)?',
+            validate: input => !isNaN(parseInt(input, 10)) ? true : 'Please enter a valid number'
+        },
+        {
+            type: 'input',
+            name: 'persons',
+            message: 'How many persons are traveling?',
+            validate: input => !isNaN(parseInt(input, 10)) && parseInt(input, 10) > 0 ? true : 'Please enter a valid number greater than 0',
+            default: '1'
+        }
+    ];
+
+    const mandatoryAnswers = await inquirer.prompt(mandatoryQuestions);
+    const targetCountry = mandatoryAnswers.country.toLowerCase().trim();
+    const targetState = mandatoryAnswers.state.toLowerCase().trim();
+    const totalBudget = parseInt(mandatoryAnswers.budget, 10);
+    const personsCount = parseInt(mandatoryAnswers.persons, 10);
+
+    console.log("\nGreat! Now let's figure out your preferences. I will ask you 10 questions.");
     console.log("Please answer on a scale from 1 to 5.\n");
 
     const selectedQuestions = getRandomQuestions(questionsPool, 10);
@@ -91,6 +172,24 @@ async function runTravelEngine() {
             distance += Math.abs(dest.features[feature] - userAnswers[feature]);
         }
 
+        // Apply penalties for mandatory conditions
+        const destNameLower = dest.name.toLowerCase();
+
+        if (targetCountry !== 'any' && !destNameLower.includes(targetCountry)) {
+            distance += 50; // Heavy penalty for location mismatch
+        }
+
+        if (targetState !== 'any' && !destNameLower.includes(targetState)) {
+            distance += 50; // Heavy penalty for location mismatch
+        }
+
+        // Approximate cost for the group
+        const estimatedGroupMinBudget = dest.budget_needed[0] * personsCount;
+        if (totalBudget < estimatedGroupMinBudget) {
+            // Add distance penalty proportionally, scaled down
+            distance += ((estimatedGroupMinBudget - totalBudget) / 100);
+        }
+
         if (distance < minDistance) {
             minDistance = distance;
             bestMatch = dest;
@@ -102,7 +201,12 @@ async function runTravelEngine() {
     console.log("=========================================");
     console.log(`Recommended Destination: ${bestMatch.name}`);
     console.log(`Specialties: ${bestMatch.specialties.join(', ')}`);
-    console.log(`Estimated Budget: $${bestMatch.budget_needed[0]} - $${bestMatch.budget_needed[1]}`);
+
+    // Scale the estimated budget for the group size
+    const groupMin = bestMatch.budget_needed[0] * personsCount;
+    const groupMax = bestMatch.budget_needed[1] * personsCount;
+    console.log(`Estimated Budget (for ${personsCount} person(s)): $${groupMin} - $${groupMax}`);
+
     console.log(`Match Score Difference: ${minDistance.toFixed(2)} (Lower is better)`);
     console.log("=========================================\n");
 
@@ -130,7 +234,7 @@ async function runTravelEngine() {
             destToUpdate.features[feature] = Math.max(1, Math.min(5, Number(newVal.toFixed(2))));
         }
         destToUpdate.adjustmentsCount = (destToUpdate.adjustmentsCount || 0) + 1;
-        saveDestinations(destinations);
+        await saveDestinations(destinations);
 
     } else {
         console.log(`\nI see. Let's fix that so I can learn from this!`);
