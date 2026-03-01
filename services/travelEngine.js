@@ -227,8 +227,20 @@ async function runTravelEngine() {
                         for (const q of questionsPool) {
                             features[q.key] = Number(nd[q.key]) || 3.0;
                         }
+
+                        let finalName = nd.name;
+                        if (targetCountry !== 'any' && !finalName.toLowerCase().includes(targetCountry)) {
+                            // Capitalize first letter for visual
+                            const displayCountry = targetCountry.charAt(0).toUpperCase() + targetCountry.slice(1);
+                            finalName += ` (${displayCountry})`;
+                        }
+                        if (targetState !== 'any' && !finalName.toLowerCase().includes(targetState)) {
+                            const displayState = targetState.charAt(0).toUpperCase() + targetState.slice(1);
+                            finalName += ` (${displayState})`;
+                        }
+
                         destinations.push({
-                            name: nd.name,
+                            name: finalName,
                             specialties: nd.specialties ? nd.specialties.split('|') : [],
                             budget_needed: [Number(nd.budget_needed_min) || 1000, Number(nd.budget_needed_max) || 5000],
                             features: features,
