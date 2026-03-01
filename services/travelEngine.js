@@ -5,6 +5,7 @@ const csv = require('csv-parser');
 const { createObjectCsvWriter } = require('csv-writer');
 const chalk = require('chalk');
 const ora = require('ora');
+require('dotenv').config();
 
 const DATA_PATH = path.join(__dirname, '../data/destinations.csv');
 
@@ -107,7 +108,7 @@ function getRandomQuestions(array, num) {
 async function runTravelEngine() {
     const destinations = await loadDestinations();
 
-    console.log(chalk.bold.magenta("\n✈️  Welcome to your one and only AI Travel Decision Companion ✈️\n"));
+    console.log(chalk.bold.magenta("\n  Welcome to your one and only AI Travel Decision Companion \n"));
 
     // Mandatory Questions
     const mandatoryQuestions = [
@@ -143,6 +144,114 @@ async function runTravelEngine() {
     const targetState = mandatoryAnswers.state.toLowerCase().trim();
     const totalBudget = parseInt(mandatoryAnswers.budget, 10);
     const personsCount = parseInt(mandatoryAnswers.persons, 10);
+
+    // AI Check: Determine if the dataset has anything matching the requested country/state
+    let hasMatch = false;
+    for (const dest of destinations) {
+        const destNameLower = dest.name.toLowerCase();
+        if (targetCountry !== 'any' && destNameLower.includes(targetCountry)) {
+            hasMatch = true;
+            break;
+        }
+        if (targetState !== 'any' && destNameLower.includes(targetState)) {
+            hasMatch = true;
+            break;
+        }
+    }
+
+    if ((targetCountry !== 'any' || targetState !== 'any') && !hasMatch) {
+        console.log(chalk.yellow(`\nNo destinations found in our database for your specified location.`));
+        const { useAI } = await inquirer.prompt([
+            {
+                type: 'confirm',
+                name: 'useAI',
+                message: chalk.cyan('Would you like Gemini AI to fetch some destinations for you and add them to the database?'),
+                default: true
+            }
+        ]);
+
+        if (useAI) {
+            let apiKey = process.env.GEMINI_API_KEY;
+            if (!apiKey) {
+                const answer = await inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'apiKey',
+                        message: chalk.cyan('Please enter your Gemini API Key (or press enter to skip):')
+                    }
+                ]);
+                apiKey = answer.apiKey.trim();
+            }
+
+            if (apiKey) {
+                const spinner = ora(chalk.yellow('Consulting Gemini AI to discover new destinations...')).start();
+                try {
+                    const { GoogleGenAI } = require('@google/genai');
+                    const ai = new GoogleGenAI({ apiKey: apiKey });
+
+                    const promptText = `
+                    I need 4 popular tourist destinations in ${targetState !== 'any' ? targetState : ''} ${targetCountry !== 'any' ? targetCountry : ''}.
+                    Respond ONLY with a valid JSON array of objects. Do NOT use markdown code blocks like \`\`\`json. Just the raw JSON.
+                    Each object must have exactly these keys:
+                    - "name": string (e.g., "City Name, Country")
+                    - "specialties": string (e.g., "Item1|Item2|Item3" - separated by pipes, no spaces around pipes)
+                    - "budget_needed_min": number (in USD, reasonable minimum group budget)
+                    - "budget_needed_max": number (in USD, reasonable maximum group budget)
+                    And the following 30 feature keys with numerical values from 1.0 to 5.0 (decimals allowed, e.g. 3.5):
+                    ${questionsPool.map(q => `"${q.key}"`).join(', ')}.
+                    Make the features realistic for the destination.
+                    `;
+
+                    const response = await ai.models.generateContent({
+                        model: 'gemini-2.5-flash',
+                        contents: promptText,
+                    });
+
+                    let text = response.text.trim();
+                    if (text.startsWith('\`\`\`json')) {
+                        text = text.substring(7);
+                    }
+                    if (text.startsWith('\`\`\`')) {
+                        text = text.substring(3);
+                    }
+                    if (text.endsWith('\`\`\`')) {
+                        text = text.substring(0, text.length - 3);
+                    }
+                    text = text.trim();
+
+                    const newDestinations = JSON.parse(text);
+
+                    let addedCount = 0;
+                    for (const nd of newDestinations) {
+                        const features = {};
+                        for (const q of questionsPool) {
+                            features[q.key] = Number(nd[q.key]) || 3.0;
+                        }
+                        destinations.push({
+                            name: nd.name,
+                            specialties: nd.specialties ? nd.specialties.split('|') : [],
+                            budget_needed: [Number(nd.budget_needed_min) || 1000, Number(nd.budget_needed_max) || 5000],
+                            features: features,
+                            adjustmentsCount: 0
+                        });
+                        addedCount++;
+                    }
+
+                    if (addedCount > 0) {
+                        await saveDestinations(destinations);
+                        spinner.succeed(chalk.green(`Successfully added ${addedCount} new destinations using AI!`));
+                    } else {
+                        spinner.fail(chalk.red('Failed to parse any destinations from AI.'));
+                    }
+
+                } catch (error) {
+                    spinner.fail(chalk.red('Error communicating with Gemini API: ' + error.message));
+                }
+            } else {
+                console.log(chalk.yellow('Skipping AI generation.'));
+            }
+        }
+    }
 
     console.log(chalk.bold.green("\nGreat! Now let's figure out your preferences. I will ask you 10 questions."));
     console.log(chalk.gray("Please answer on a scale from 1 to 5.\n"));
