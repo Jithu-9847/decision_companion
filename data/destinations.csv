@@ -62,3 +62,34 @@ Mahabalipuram India,Temple|Shore,700,2000,2,4,5,2,3,4,4,5,3,5,4,4,4,1,1,4,5,5,4,
 Konark India,SunTemple|Heritage,800,2100,2,3,5,1,3,4,4,5,3,5,4,3,4,1,1,3,4,5,3,5,3,4,1,2,5,1,3,3,5,5,0
 Puri India,Temple|Beach,800,2300,2,4,5,2,3,5,4,5,3,5,4,4,5,1,1,3,4,5,4,5,3,4,2,3,4,1,3,3,4,5,0
 Bhubaneswar India,Temples|Culture,700,2000,2,3,5,2,2,4,4,5,4,5,4,4,1,1,1,4,4,5,3,4,3,4,2,3,5,1,3,3,5,5,0
+London City Center UK,Urban Tourism|Landmarks|Shopping,15000,30000,2,3,5,5,2,5,5,5,5,2,5,5,1,1,1,5,5,2,4,5,4,5,5,4,5,2,3,3,5,5,0
+Buckingham Palace London,Royal Palace|History,14000,26000,1,3,5,2,2,5,4,5,5,2,5,4,1,1,1,5,5,2,4,5,4,5,2,3,5,1,2,2,5,4,0
+Tower of London UK,Historic Fortress|Museum,15000,28000,2,3,5,2,2,5,4,5,5,2,5,4,1,1,1,5,5,2,4,5,4,5,2,3,5,1,2,2,5,4,0
+London Eye UK,City View|Observation Wheel,16000,30000,3,4,4,3,2,5,4,4,5,2,5,4,1,1,1,5,5,2,4,5,5,5,3,3,4,1,2,3,5,4,0
+Big Ben London,Architecture|Landmark,14000,25000,1,3,5,2,2,5,4,5,5,2,5,4,1,1,1,5,5,2,4,5,4,5,2,2,4,1,2,2,5,4,0
+British Museum London,Museum|History|Art,13000,24000,1,3,5,2,2,5,4,5,5,3,5,3,1,1,1,5,5,2,4,5,3,5,2,3,5,1,2,2,5,4,0
+Hyde Park London,Park|Relaxation|Nature,12000,22000,2,5,3,2,5,5,4,3,5,3,5,3,1,1,2,5,5,3,4,5,5,5,2,4,2,3,3,4,3,3,0
+Tower Bridge London,Architecture|River Thames,14000,26000,2,3,4,2,3,5,4,5,5,2,5,4,1,1,1,5,5,2,4,5,4,5,2,2,4,1,3,3,5,4,0
+Westminster Abbey London,Church|Heritage,14000,26000,1,3,5,1,2,5,4,5,5,2,5,3,1,1,1,5,5,2,4,5,4,5,1,3,5,1,2,2,5,4,0
+Camden Market London,Street Market|Food|Shopping,13000,24000,2,3,4,4,2,4,5,3,5,3,4,5,1,1,1,5,5,3,4,4,3,5,4,3,3,1,2,2,4,4,0
+Oxford Street London,Shopping|Urban Life,15000,30000,1,3,3,5,1,4,5,2,5,2,5,5,1,1,1,5,5,3,4,4,3,5,5,3,2,1,2,2,4,4,0
+Greenwich London,Maritime|Observatory,13000,25000,2,4,5,2,3,5,4,4,5,3,5,3,1,1,2,5,5,3,4,5,4,5,2,3,4,1,3,3,4,4,0
+Notting Hill London,Colorful Streets|Culture,14000,26000,2,4,4,3,2,5,4,3,5,2,5,4,1,1,1,5,5,3,4,5,5,5,3,3,3,1,2,3,4,4,0
+Kensington Palace London,Royal Residence|Gardens,15000,27000,1,4,5,2,3,5,4,5,5,2,5,4,1,1,1,5,5,3,4,5,5,5,2,4,5,1,2,3,5,4,0
+Madame Tussauds London,Wax Museum|Entertainment,16000,30000,2,3,3,4,1,5,4,3,5,2,5,4,1,1,1,5,5,3,4,4,4,5,4,3,4,1,2,2,4,4,0
+Eiffel Tower Paris,Landmark|Romance|City View,16000,32000,1,4,5,3,2,5,5,5,5,2,5,5,1,1,1,5,4,3,3,5,5,5,3,4,5,1,2,3,5,4,0
+Louvre Museum Paris,Art|Museum|History,15000,30000,1,3,5,2,1,5,4,5,5,3,5,4,1,1,1,5,4,3,3,5,4,5,2,3,5,1,2,2,5,4,0
+Montmartre Paris,Culture|Street Art,14000,28000,2,4,5,3,2,4,5,4,5,3,5,4,1,1,1,5,4,3,3,5,5,5,3,3,4,1,2,3,5,4,0
+Seine River Cruise Paris,River|Romantic Ride,17000,33000,2,5,4,3,3,5,5,4,5,2,5,4,1,1,1,5,4,3,3,5,5,5,3,4,4,1,2,3,5,4,0
+Burj Khalifa Dubai,Skyscraper|City View,14000,30000,2,3,4,5,1,5,5,3,5,2,5,5,1,1,1,5,5,5,3,5,4,5,5,4,4,1,3,3,5,5,0
+Dubai Mall UAE,Shopping|Entertainment,13000,28000,1,3,3,5,1,5,5,2,5,2,5,5,1,1,1,5,5,5,3,4,3,5,5,4,3,1,2,2,4,4,0
+Desert Safari Dubai,Desert|Adventure,15000,32000,5,3,4,4,4,5,4,3,5,3,5,4,1,1,2,4,5,5,2,5,4,5,4,3,3,5,4,4,4,5,0
+Palm Jumeirah Dubai,Beach|Luxury Resort,16000,35000,3,5,3,4,4,5,5,2,5,2,5,5,5,1,1,4,5,5,4,5,5,5,4,5,3,3,3,4,4,4,0
+Marina Bay Singapore,Cityscape|Luxury,16000,32000,2,4,4,4,2,5,5,3,5,2,5,5,4,1,1,5,5,5,5,5,4,5,4,4,4,2,3,3,5,5,0
+Sentosa Island Singapore,Beach|Theme Parks,17000,35000,4,5,3,4,5,5,5,2,5,2,5,5,5,1,2,5,5,5,5,5,5,5,4,5,3,4,4,4,4,5,0
+Gardens by the Bay Singapore,Nature|Futuristic Park,15000,30000,2,5,4,3,5,5,4,3,5,2,5,4,1,1,2,5,5,5,5,5,5,5,3,4,4,2,3,4,5,5,0
+Universal Studios Singapore,Theme Park|Adventure,18000,36000,5,4,3,5,2,5,5,2,5,2,5,5,1,1,1,5,5,5,5,5,5,5,5,4,3,5,3,3,4,5,0
+Tokyo City Japan,Technology|Culture,14000,30000,3,3,5,5,2,5,5,4,5,3,5,5,1,1,1,5,3,3,4,5,4,5,5,4,5,2,3,3,5,5,0
+Mount Fuji Japan,Mountain|Nature,15000,32000,5,4,4,1,5,4,3,4,4,3,5,2,1,5,3,4,3,2,2,5,5,5,1,3,2,5,5,5,4,4,0
+Kyoto Japan,Temples|Tradition,14000,28000,2,4,5,2,3,5,4,5,4,3,5,3,1,2,2,5,3,3,3,5,5,5,2,4,5,1,3,3,5,5,0
+Osaka Japan,Food|Nightlife,15000,30000,3,3,4,5,2,5,5,3,5,3,5,5,1,1,1,5,3,3,4,4,4,5,5,3,3,2,3,3,4,5,0
