@@ -124,7 +124,7 @@ async function runTravelEngine() {
         {
             type: 'input',
             name: 'budget',
-            message: 'What is your expected total budget (in USD)?',
+            message: 'What is your expected total budget (in Rupees ₹)?',
             validate: input => !isNaN(parseInt(input, 10)) ? true : 'Please enter a valid number'
         },
         {
@@ -205,7 +205,7 @@ async function runTravelEngine() {
     // Scale the estimated budget for the group size
     const groupMin = bestMatch.budget_needed[0] * personsCount;
     const groupMax = bestMatch.budget_needed[1] * personsCount;
-    console.log(`Estimated Budget (for ${personsCount} person(s)): $${groupMin} - $${groupMax}`);
+    console.log(`Estimated Budget (for ${personsCount} person(s)): ₹${groupMin} - ₹${groupMax}`);
 
     console.log(`Match Score Difference: ${minDistance.toFixed(2)} (Lower is better)`);
     console.log("=========================================\n");
