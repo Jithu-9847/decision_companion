@@ -3,6 +3,8 @@ const path = require('path');
 const inquirer = require('inquirer');
 const csv = require('csv-parser');
 const { createObjectCsvWriter } = require('csv-writer');
+const chalk = require('chalk');
+const ora = require('ora');
 
 const DATA_PATH = path.join(__dirname, '../data/destinations.csv');
 
@@ -105,33 +107,33 @@ function getRandomQuestions(array, num) {
 async function runTravelEngine() {
     const destinations = await loadDestinations();
 
-    console.log("Welcome to your one and only Travel Decision Companion \n");
+    console.log(chalk.bold.magenta("\n✈️  Welcome to your one and only AI Travel Decision Companion ✈️\n"));
 
     // Mandatory Questions
     const mandatoryQuestions = [
         {
             type: 'input',
             name: 'country',
-            message: 'Where do you want to travel? Enter country (or type "any"):',
+            message: chalk.cyan('Where do you want to travel? Enter country (or type "any"):'),
             default: 'any'
         },
         {
             type: 'input',
             name: 'state',
-            message: 'Enter state or region (or type "any"):',
+            message: chalk.cyan('Enter state or region (or type "any"):'),
             default: 'any'
         },
         {
             type: 'input',
             name: 'budget',
-            message: 'What is your expected total budget (in Rupees ₹)?',
-            validate: input => !isNaN(parseInt(input, 10)) ? true : 'Please enter a valid number'
+            message: chalk.cyan('What is your expected total budget (in Rupees ₹)?'),
+            validate: input => !isNaN(parseInt(input, 10)) ? true : chalk.red('Please enter a valid number')
         },
         {
             type: 'input',
             name: 'persons',
-            message: 'How many persons are traveling?',
-            validate: input => !isNaN(parseInt(input, 10)) && parseInt(input, 10) > 0 ? true : 'Please enter a valid number greater than 0',
+            message: chalk.cyan('How many persons are traveling?'),
+            validate: input => !isNaN(parseInt(input, 10)) && parseInt(input, 10) > 0 ? true : chalk.red('Please enter a valid number greater than 0'),
             default: '1'
         }
     ];
@@ -142,8 +144,8 @@ async function runTravelEngine() {
     const totalBudget = parseInt(mandatoryAnswers.budget, 10);
     const personsCount = parseInt(mandatoryAnswers.persons, 10);
 
-    console.log("\nGreat! Now let's figure out your preferences. I will ask you 10 questions.");
-    console.log("Please answer on a scale from 1 to 5.\n");
+    console.log(chalk.bold.green("\nGreat! Now let's figure out your preferences. I will ask you 10 questions."));
+    console.log(chalk.gray("Please answer on a scale from 1 to 5.\n"));
 
     const selectedQuestions = getRandomQuestions(questionsPool, 10);
 
@@ -196,19 +198,23 @@ async function runTravelEngine() {
         }
     }
 
-    console.log("\n=========================================");
-    console.log("                RESULT                   ");
-    console.log("=========================================");
-    console.log(`Recommended Destination: ${bestMatch.name}`);
-    console.log(`Specialties: ${bestMatch.specialties.join(', ')}`);
+    const spinner = ora(chalk.yellow('Analyzing your preferences through the fuzzy logic engine...')).start();
+    await new Promise(resolve => setTimeout(resolve, 1500)); // Fake realistic delay for UX
+    spinner.succeed(chalk.green('Analysis Complete!'));
+
+    console.log(chalk.bold.magenta("\n========================================="));
+    console.log(chalk.bold.magenta("                RESULT                   "));
+    console.log(chalk.bold.magenta("========================================="));
+    console.log(`${chalk.bold.blue('🌍 Recommended Destination:')} ${chalk.bold.white(bestMatch.name)}`);
+    console.log(`${chalk.bold.yellow('✨ Specialties:')} ${bestMatch.specialties.join(', ')}`);
 
     // Scale the estimated budget for the group size
     const groupMin = bestMatch.budget_needed[0] * personsCount;
     const groupMax = bestMatch.budget_needed[1] * personsCount;
-    console.log(`Estimated Budget (for ${personsCount} person(s)): ₹${groupMin} - ₹${groupMax}`);
+    console.log(`${chalk.bold.green('💰 Estimated Budget (for ' + personsCount + ' person(s)):')} ₹${groupMin} - ₹${groupMax}`);
 
-    console.log(`Match Score Difference: ${minDistance.toFixed(2)} (Lower is better)`);
-    console.log("=========================================\n");
+    console.log(`${chalk.dim('🎯 Match Score Difference:')} ${minDistance.toFixed(2)} (Lower is better)`);
+    console.log(chalk.bold.magenta("=========================================\n"));
 
     // Dynamic Learning & Feedback Loop
     const { isGoodDecision } = await inquirer.prompt([
@@ -223,8 +229,8 @@ async function runTravelEngine() {
     const LEARNING_RATE = 0.2;
 
     if (isGoodDecision) {
-        console.log(`\nAwesome! I am glad you liked the recommendation.`);
-        console.log(`[Learning Module] Slightly adjusting ${bestMatch.name} to match these preferences closer.`);
+        console.log(chalk.bold.green(`\nAwesome! I am glad you liked the recommendation.`));
+        console.log(chalk.dim(`[Learning Module] Slightly adjusting ${bestMatch.name} to match these preferences closer.`));
 
         const destToUpdate = destinations.find(d => d.name === bestMatch.name);
         for (const feature of Object.keys(userAnswers)) {
@@ -237,22 +243,22 @@ async function runTravelEngine() {
         await saveDestinations(destinations);
 
     } else {
-        console.log(`\nI see. Let's fix that so I can learn from this!`);
+        console.log(chalk.bold.yellow(`\nI see. Let's fix that so I can learn from this!`));
 
         const { preferredDestName } = await inquirer.prompt([
             {
                 type: 'input',
                 name: 'preferredDestName',
-                message: 'Where do you think you should actually travel based on these preferences?'
+                message: chalk.cyan('Where do you think you should actually travel based on these preferences?')
             }
         ]);
 
         let targetDest = destinations.find(d => d.name.toLowerCase() === preferredDestName.toLowerCase());
 
         if (targetDest) {
-            console.log(`[Learning Module] Found ${targetDest.name} in database. Adjusting its weights significantly towards your answers.`);
+            console.log(chalk.dim(`[Learning Module] Found ${targetDest.name} in database. Adjusting its weights significantly towards your answers.`));
         } else {
-            console.log(`[Learning Module] New destination detected: ${preferredDestName}. Adding to database!`);
+            console.log(chalk.dim(`[Learning Module] New destination detected: ${preferredDestName}. Adding to database!`));
             // Initialize with default mid values
             const defaultFeatures = {};
             for (const q of questionsPool) {
@@ -279,8 +285,8 @@ async function runTravelEngine() {
         }
         targetDest.adjustmentsCount = (targetDest.adjustmentsCount || 0) + 1;
 
-        saveDestinations(destinations);
-        console.log("Database updated successfully! I'll be smarter next time.");
+        await saveDestinations(destinations);
+        console.log(chalk.bold.green("Database updated successfully! I'll be smarter next time."));
     }
 }
 
