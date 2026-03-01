@@ -1,0 +1,133 @@
+[
+    {
+        "type": "Large Dog",
+        "weight_min_kg": 25,
+        "weight_max_kg": 45,
+        "weight_min_lbs": 55,
+        "weight_max_lbs": 100,
+        "suitable_for": [
+            "House with yard",
+            "High activity",
+            "High dedication"
+        ]
+    },
+    {
+        "type": "Medium Dog",
+        "weight_min_kg": 10,
+        "weight_max_kg": 25,
+        "weight_min_lbs": 22,
+        "weight_max_lbs": 55,
+        "suitable_for": [
+            "House with yard",
+            "Moderate to high activity"
+        ]
+    },
+    {
+        "type": "Small Dog",
+        "weight_min_kg": 2,
+        "weight_max_kg": 10,
+        "weight_min_lbs": 4,
+        "weight_max_lbs": 22,
+        "suitable_for": [
+            "Apartment",
+            "Moderate activity",
+            "Companionship"
+        ]
+    },
+    {
+        "type": "Cat",
+        "weight_min_kg": 3.5,
+        "weight_max_kg": 5.5,
+        "weight_min_lbs": 8,
+        "weight_max_lbs": 12,
+        "suitable_for": [
+            "Apartment",
+            "House",
+            "Independent",
+            "Low noise"
+        ]
+    },
+    {
+        "type": "Leopard Gecko",
+        "weight_min_kg": 0.05,
+        "weight_max_kg": 0.08,
+        "weight_min_lbs": 0.11,
+        "weight_max_lbs": 0.18,
+        "suitable_for": [
+            "Observation",
+            "Low maintenance",
+            "Enclosure"
+        ]
+    },
+    {
+        "type": "Hermit Crab",
+        "weight_min_kg": 0.02,
+        "weight_max_kg": 0.1,
+        "weight_min_lbs": 0.04,
+        "weight_max_lbs": 0.22,
+        "suitable_for": [
+            "Observation",
+            "Low maintenance",
+            "Enclosure"
+        ]
+    },
+    {
+        "type": "Hamster",
+        "weight_min_kg": 0.02,
+        "weight_max_kg": 0.15,
+        "weight_min_lbs": 0.04,
+        "weight_max_lbs": 0.33,
+        "suitable_for": [
+            "Small space",
+            "Low interaction",
+            "Enclosure"
+        ]
+    },
+    {
+        "type": "Betta Fish",
+        "weight_min_kg": 0.002,
+        "weight_max_kg": 0.008,
+        "weight_min_lbs": 0.004,
+        "weight_max_lbs": 0.018,
+        "suitable_for": [
+            "Very low maintenance",
+            "Small tank",
+            "Observation"
+        ]
+    },
+    {
+        "type": "Community Fish Tank",
+        "weight_min_kg": 0.0,
+        "weight_max_kg": 0.0,
+        "weight_min_lbs": 0.0,
+        "weight_max_lbs": 0.0,
+        "note": "Weight depends entirely on the size of the tank (water is heavy!)",
+        "suitable_for": [
+            "Observation",
+            "Visually striking",
+            "Moderate maintenance"
+        ]
+    },
+    {
+        "type": "Reptile (General)",
+        "weight_min_kg": 0.1,
+        "weight_max_kg": 2.0,
+        "weight_min_lbs": 0.2,
+        "weight_max_lbs": 4.5,
+        "suitable_for": [
+            "Observation",
+            "Enclosure",
+            "Live food feeding"
+        ]
+    },
+    {
+        "type": "Pet Rock",
+        "weight_min_kg": 0.2,
+        "weight_max_kg": 1.0,
+        "weight_min_lbs": 0.5,
+        "weight_max_lbs": 2.2,
+        "suitable_for": [
+            "Zero maintenance"
+        ]
+    }
+]

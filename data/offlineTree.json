@@ -1,0 +1,626 @@
+{
+  "pets": {
+    "question": "What is your primary motivation for getting a pet?",
+    "options": {
+      "1": {
+        "text": "Companionship and affection",
+        "next": {
+          "question": "How much time can you dedicate daily to direct pet interaction and exercise?",
+          "options": {
+            "1": {
+              "text": "2+ hours (high dedication)",
+              "next": {
+                "question": "Do you have a yard or easy access to outdoor spaces like parks or trails?",
+                "options": {
+                  "1": {
+                    "text": "Yes, a secure yard or frequent outdoor access",
+                    "next": {
+                      "question": "What is your living situation?",
+                      "options": {
+                        "1": {
+                          "text": "House with a yard",
+                          "next": {
+                            "question": "Are you prepared for a pet that may require professional grooming and regular vet check-ups?",
+                            "options": {
+                              "1": {
+                                "text": "Yes, I am prepared for ongoing grooming and vet costs",
+                                "next": {
+                                  "question": "How much noise are you comfortable with from a pet?",
+                                  "options": {
+                                    "1": {
+                                      "text": "Moderate to high (barking, playful noises)",
+                                      "next": {
+                                        "question": "Are you looking for a highly trainable pet that can learn commands and tricks?",
+                                        "options": {
+                                          "1": {
+                                            "text": "Yes, trainability is important",
+                                            "next": {
+                                              "question": "Do you prefer a pet that is more independent or one that constantly seeks attention and interaction?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "Constantly seeks attention and interaction",
+                                                  "next": {
+                                                    "question": "How important is it for the pet to be good with children and other pets?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "Very important, they will be around kids/other pets",
+                                                        "next": {
+                                                          "question": "What is your budget for initial setup and ongoing monthly expenses (food, vet, toys, training)?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Moderate to high ($100+/month)",
+                                                              "next": {
+                                                                "question": "How long are you prepared for the pet to live?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "10-15+ years",
+                                                                    "next": {
+                                                                      "question": "Do you have experience with pet ownership, especially larger or more active breeds?",
+                                                                      "options": {
+                                                                        "1": {
+                                                                          "text": "Yes, I have experience",
+                                                                          "result": {
+                                                                            "recommendation": "Dog",
+                                                                            "reason": "You have a high dedication, suitable living situation, budget, and experience for an active, companion-seeking pet like a dog."
+                                                                          }
+                                                                        },
+                                                                        "2": {
+                                                                          "text": "No, this would be my first pet or first larger pet",
+                                                                          "result": {
+                                                                            "recommendation": "Dog (medium breed)",
+                                                                            "reason": "Your dedication and living situation are perfect for a dog, but a medium-sized breed might be more manageable for a first-time owner."
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "text": "Apartment (with no private yard)",
+                          "next": {
+                            "question": "How important is it for the pet to be quiet and not disturb neighbors?",
+                            "options": {
+                              "1": {
+                                "text": "Very important, quiet is a must",
+                                "next": {
+                                  "question": "Are you comfortable with a pet that is highly active indoors and needs consistent mental stimulation?",
+                                  "options": {
+                                    "1": {
+                                      "text": "Yes, I can provide that",
+                                      "next": {
+                                        "question": "Are you prepared for daily walks regardless of weather conditions, potentially multiple times a day?",
+                                        "options": {
+                                          "1": {
+                                            "text": "Yes, I am committed to daily walks",
+                                            "next": {
+                                              "question": "What is your budget for initial setup and ongoing monthly expenses (food, vet, toys, training)?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "Moderate to high ($80+/month)",
+                                                  "next": {
+                                                    "question": "Do you prefer a pet that is more independent or one that constantly seeks attention and interaction?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "Constantly seeks attention and interaction",
+                                                        "next": {
+                                                          "question": "How long are you prepared for the pet to live?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "10-15+ years",
+                                                              "next": {
+                                                                "question": "Do you have experience with pet ownership in an apartment setting?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "Yes, I have experience",
+                                                                    "result": {
+                                                                      "recommendation": "Small Dog",
+                                                                      "reason": "Your apartment living situation and commitment to exercise and attention make a small dog an excellent companion choice."
+                                                                    }
+                                                                  },
+                                                                  "2": {
+                                                                    "text": "No, this would be my first pet in an apartment",
+                                                                    "result": {
+                                                                      "recommendation": "Small Dog",
+                                                                      "reason": "Your dedication and apartment setup are suitable for a small dog, which adapts well to indoor living with consistent outdoor time."
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "2": {
+                    "text": "No, limited or no outdoor access directly from home",
+                    "next": {
+                      "question": "Are you comfortable with a pet that is largely self-sufficient and doesn't require constant direct supervision?",
+                      "options": {
+                        "1": {
+                          "text": "Yes, I prefer a more independent pet",
+                          "next": {
+                            "question": "How important is it for the pet to be relatively quiet and not prone to barking or loud vocalizations?",
+                            "options": {
+                              "1": {
+                                "text": "Very important, minimal noise is preferred",
+                                "next": {
+                                  "question": "Are you comfortable with occasional scratching of furniture if not properly redirected to scratching posts?",
+                                  "options": {
+                                    "1": {
+                                      "text": "Yes, I can manage that with training/accessories",
+                                      "next": {
+                                        "question": "What is your budget for initial setup and ongoing monthly expenses (food, vet, litter, toys)?",
+                                        "options": {
+                                          "1": {
+                                            "text": "Low to moderate ($30-70/month)",
+                                            "next": {
+                                              "question": "How long are you prepared for the pet to live?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "10-15+ years",
+                                                  "next": {
+                                                    "question": "Do you have any allergies to pet dander, or are you looking for hypoallergenic options?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "No allergies / Hypoallergenic is not a strict requirement",
+                                                        "next": {
+                                                          "question": "Do you prefer a pet that is more active during the day or night?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Both, or active at night (to suit my schedule)",
+                                                              "next": {
+                                                                "question": "How important is it for the pet to be able to entertain itself for periods?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "Very important, they need to be independent",
+                                                                    "result": {
+                                                                      "recommendation": "Cat",
+                                                                      "reason": "You prefer an independent, quiet pet suitable for indoor living with a moderate budget and long-term commitment."
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "text": "Less than 1 hour (low to moderate dedication)",
+              "next": {
+                "question": "Do you have space for a dedicated enclosure, tank, or cage?",
+                "options": {
+                  "1": {
+                    "text": "Yes, I have space for an enclosure/tank",
+                    "next": {
+                      "question": "Are you comfortable with pets that require specialized care, such as specific temperature/humidity or diet?",
+                      "options": {
+                        "1": {
+                          "text": "Yes, I'm willing to learn and provide specialized care",
+                          "next": {
+                            "question": "How do you feel about handling live food (insects, small rodents) for your pet's diet?",
+                            "options": {
+                              "1": {
+                                "text": "I'm comfortable with live food",
+                                "next": {
+                                  "question": "Are you looking for a pet that is primarily for observation rather than constant physical interaction?",
+                                  "options": {
+                                    "1": {
+                                      "text": "Yes, observation is fine",
+                                      "next": {
+                                        "question": "How long are you prepared for the pet to live?",
+                                        "options": {
+                                          "1": {
+                                            "text": "5-10+ years",
+                                            "next": {
+                                              "question": "What is your budget for initial setup and ongoing monthly expenses (enclosure, food, heating/lighting)?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "Moderate to high ($50-100+/month)",
+                                                  "next": {
+                                                    "question": "Are you comfortable with a pet that might have a unique texture (scales) or appearance?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "Yes, I appreciate unique pets",
+                                                        "next": {
+                                                          "question": "Are you comfortable with shedding skin or substrate changes?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Yes, I can manage that",
+                                                              "result": {
+                                                                "recommendation": "Reptile",
+                                                                "reason": "You're comfortable with specialized care, unique appearances, and handling live food for an observation-focused pet."
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "2": {
+                                      "text": "No, I prefer more interaction",
+                                      "next": {
+                                        "question": "Are you open to pets that live in smaller enclosures but can be handled regularly?",
+                                        "options": {
+                                          "1": {
+                                            "text": "Yes, regular handling is important",
+                                            "next": {
+                                              "question": "How important is it for the pet to be quiet?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "Very important",
+                                                  "next": {
+                                                    "question": "Are you comfortable with a pet that primarily forages and nests?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "Yes, I find that interesting",
+                                                        "next": {
+                                                          "question": "What is your budget for initial setup and ongoing monthly expenses?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Low to moderate ($20-50/month)",
+                                                              "next": {
+                                                                "question": "How long are you prepared for the pet to live?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "2-4 years",
+                                                                    "result": {
+                                                                      "recommendation": "Hamster",
+                                                                      "reason": "You prefer a small, quiet, handleable pet with lower daily dedication and a shorter lifespan, suitable for a contained environment."
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "2": {
+                                "text": "I prefer not to handle live food",
+                                "next": {
+                                  "question": "Are you interested in aquatic life (fish)?",
+                                  "options": {
+                                    "1": {
+                                      "text": "Yes, very interested in fish",
+                                      "next": {
+                                        "question": "How much maintenance are you willing to do for a tank (water changes, cleaning)?",
+                                        "options": {
+                                          "1": {
+                                            "text": "Moderate (weekly/bi-weekly)",
+                                            "next": {
+                                              "question": "What size tank can you accommodate?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "Small to medium (5-20 gallons)",
+                                                  "next": {
+                                                    "question": "Are you looking for a single pet or a community of fish?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "A single, visually striking pet",
+                                                        "next": {
+                                                          "question": "Do you prefer freshwater or saltwater setups?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Freshwater (simpler)",
+                                                              "next": {
+                                                                "question": "What is your budget for initial setup and ongoing monthly expenses (tank, filter, food, electricity)?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "Low to moderate ($20-60/month)",
+                                                                    "next": {
+                                                                      "question": "How long are you prepared for the pet to live?",
+                                                                      "options": {
+                                                                        "1": {
+                                                                          "text": "3-5 years",
+                                                                          "result": {
+                                                                            "recommendation": "Betta Fish",
+                                                                            "reason": "You are interested in a single, visually striking freshwater aquatic pet with moderate maintenance and a contained environment."
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "2": {
+                                                        "text": "A community of fish",
+                                                        "next": {
+                                                          "question": "Are you comfortable with more complex water parameter management and tank cycling?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Yes, I'm willing to learn the complexities",
+                                                              "next": {
+                                                                "question": "What is your budget for initial setup and ongoing monthly expenses (tank, filter, heater, decor, food, electricity)?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "Moderate to high ($50-100+/month)",
+                                                                    "next": {
+                                                                      "question": "How long are you prepared for the pet to live?",
+                                                                      "options": {
+                                                                        "1": {
+                                                                          "text": "5-10 years (depending on species)",
+                                                                          "result": {
+                                                                            "recommendation": "Community Fish Tank",
+                                                                            "reason": "You're prepared for the complexities and costs of maintaining a freshwater community tank, providing a dynamic visual experience."
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "2": {
+        "text": "Low maintenance and unique/exotic",
+        "next": {
+          "question": "How much time can you dedicate daily to pet interaction and care?",
+          "options": {
+            "1": {
+              "text": "Less than 30 minutes (minimal daily commitment)",
+              "next": {
+                "question": "Do you have space for a dedicated enclosure, tank, or vivarium?",
+                "options": {
+                  "1": {
+                    "text": "Yes, I have dedicated space",
+                    "next": {
+                      "question": "Are you comfortable with pets that primarily live in their enclosure and are mostly for observation?",
+                      "options": {
+                        "1": {
+                          "text": "Yes, observation is my main interest",
+                          "next": {
+                            "question": "Are you comfortable handling live insects (e.g., crickets, mealworms) for your pet's diet?",
+                            "options": {
+                              "1": {
+                                "text": "Yes, I am comfortable with live insects",
+                                "next": {
+                                  "question": "Are you comfortable with pets that require specific temperature and humidity levels in their enclosure?",
+                                  "options": {
+                                    "1": {
+                                      "text": "Yes, I can provide a controlled environment",
+                                      "next": {
+                                        "question": "How long are you prepared for the pet to live?",
+                                        "options": {
+                                          "1": {
+                                            "text": "5-15+ years",
+                                            "next": {
+                                              "question": "What is your budget for initial setup (enclosure, heating, lighting) and ongoing monthly expenses?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "Moderate to high ($50-100+/month)",
+                                                  "next": {
+                                                    "question": "Do you prefer a pet that is active during the day or primarily nocturnal?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "Primarily nocturnal (active in evenings)",
+                                                        "next": {
+                                                          "question": "Are you comfortable with the concept of occasional shedding and substrate changes?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Yes, I can manage routine maintenance",
+                                                              "next": {
+                                                                "question": "Do you have any phobias regarding reptiles or spiders?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "No phobias, open to various unique pets",
+                                                                    "result": {
+                                                                      "recommendation": "Leopard Gecko",
+                                                                      "reason": "You're seeking a low-maintenance, unique, observation-focused pet, comfortable with specialized care and live insects."
+                                                                    }
+                                                                  },
+                                                                  "2": {
+                                                                    "text": "Yes, I prefer to avoid reptiles/spiders",
+                                                                    "result": {
+                                                                      "recommendation": "Hermit Crab",
+                                                                      "reason": "You desire a unique, low-maintenance observation pet in an enclosure, but prefer to avoid reptiles/spiders."
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "2": {
+                                "text": "No, I prefer not to handle live insects",
+                                "next": {
+                                  "question": "Are you interested in aquatic pets that require minimal daily interaction beyond feeding?",
+                                  "options": {
+                                    "1": {
+                                      "text": "Yes, fish sound appealing",
+                                      "next": {
+                                        "question": "How much maintenance are you willing to do for a tank (water changes, cleaning)?",
+                                        "options": {
+                                          "1": {
+                                            "text": "Low to moderate (bi-weekly/monthly)",
+                                            "next": {
+                                              "question": "What size tank can you comfortably accommodate?",
+                                              "options": {
+                                                "1": {
+                                                  "text": "Small (1-5 gallons)",
+                                                  "next": {
+                                                    "question": "Are you looking for a single, peaceful pet?",
+                                                    "options": {
+                                                      "1": {
+                                                        "text": "Yes, a single, visually appealing fish",
+                                                        "next": {
+                                                          "question": "Do you prefer freshwater or saltwater?",
+                                                          "options": {
+                                                            "1": {
+                                                              "text": "Freshwater (easier setup)",
+                                                              "next": {
+                                                                "question": "What is your budget for initial setup and ongoing monthly expenses?",
+                                                                "options": {
+                                                                  "1": {
+                                                                    "text": "Low ($10-30/month)",
+                                                                    "next": {
+                                                                      "question": "How long are you prepared for the pet to live?",
+                                                                      "options": {
+                                                                        "1": {
+                                                                          "text": "2-4 years",
+                                                                          "result": {
+                                                                            "recommendation": "Betta Fish",
+                                                                            "reason": "You're seeking a low-maintenance, aesthetically pleasing aquatic pet with minimal interaction and a compact setup, without handling live food."
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "2": {
+                                      "text": "No, not interested in fish",
+                                      "result": {
+                                        "recommendation": "Pet Rock",
+                                        "reason": "Given your extremely low daily commitment, disinterest in live food, and aversion to fish, a pet rock offers ultimate low maintenance."
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

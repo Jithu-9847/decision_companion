@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Large Dog",
+    "weight_range_kg": [
+      25,
+      45
+    ],
+    "features": {
+      "timeCommitment": 5,
+      "spaceRequired": 5,
+      "budget": 4,
+      "interactionLevel": 5,
+      "noiseTolerance": 4
+    },
+    "adjustmentsCount": 0
+  },
+  {
+    "name": "Small Dog",
+    "weight_range_kg": [
+      2,
+      10
+    ],
+    "features": {
+      "timeCommitment": 4.15,
+      "spaceRequired": 2.15,
+      "budget": 2.85,
+      "interactionLevel": 4.7,
+      "noiseTolerance": 3
+    },
+    "adjustmentsCount": 1
+  },
+  {
+    "name": "Cat",
+    "weight_range_kg": [
+      3.5,
+      5.5
+    ],
+    "features": {
+      "timeCommitment": 2.0837499999999998,
+      "spaceRequired": 3.2775,
+      "budget": 2.8725,
+      "interactionLevel": 2.85,
+      "noiseTolerance": 1.48875
+    },
+    "adjustmentsCount": 2
+  },
+  {
+    "name": "Leopard Gecko",
+    "weight_range_kg": [
+      0.05,
+      0.08
+    ],
+    "features": {
+      "timeCommitment": 1.5,
+      "spaceRequired": 1.5,
+      "budget": 2,
+      "interactionLevel": 1,
+      "noiseTolerance": 1
+    },
+    "adjustmentsCount": 0
+  },
+  {
+    "name": "Hamster",
+    "weight_range_kg": [
+      0.02,
+      0.15
+    ],
+    "features": {
+      "timeCommitment": 2,
+      "spaceRequired": 1,
+      "budget": 1.5,
+      "interactionLevel": 2.5,
+      "noiseTolerance": 2
+    },
+    "adjustmentsCount": 0
+  },
+  {
+    "name": "Betta Fish",
+    "weight_range_kg": [
+      0.002,
+      0.008
+    ],
+    "features": {
+      "timeCommitment": 1,
+      "spaceRequired": 1,
+      "budget": 1,
+      "interactionLevel": 1,
+      "noiseTolerance": 1
+    },
+    "adjustmentsCount": 0
+  },
+  {
+    "name": "Community Fish Tank",
+    "weight_range_kg": [
+      0,
+      0
+    ],
+    "features": {
+      "timeCommitment": 3,
+      "spaceRequired": 3,
+      "budget": 3.5,
+      "interactionLevel": 1,
+      "noiseTolerance": 1
+    },
+    "adjustmentsCount": 0
+  }
+]
