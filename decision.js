@@ -1,17 +1,17 @@
-const { runDynamicSelector } = require('./services/dynamicEngine');
+const { runTravelEngine } = require('./services/travelEngine');
 
 async function main() {
     console.log("=========================================");
-    console.log("   Welcome to Offline Pet Selector");
+    console.log("   Welcome to You one and only decision companion");
     console.log("=========================================\n");
 
     try {
-        await runDynamicSelector();
+        await runTravelEngine();
     } catch (error) {
         console.error(`\nSystem Error: ${error.message}`);
     }
 
-    console.log("\nExiting Pet Selector...");
+    console.log("\nExiting decision companion...");
     process.exit(0);
 }
 

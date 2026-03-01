@@ -1,0 +1,183 @@
+const fs = require('fs');
+const path = require('path');
+const inquirer = require('inquirer');
+
+const DATA_PATH = path.join(__dirname, '../data/destinations.json');
+
+const questionsPool = [
+    { key: 'adventure_level', message: 'On a scale of 1-5, how much adventure and thrill are you seeking?' },
+    { key: 'relaxation_level', message: 'How important is relaxation and unwinding for this trip? (1-5)' },
+    { key: 'cultural_immersion', message: 'How deeply do you want to immerse yourself in the local culture? (1-5)' },
+    { key: 'nightlife', message: 'How vibrant should the nightlife be at your destination? (1-5)' },
+    { key: 'nature_focused', message: 'How important is it to be surrounded by nature? (1-5)' },
+    { key: 'family_friendly', message: 'How family-friendly does the destination need to be? (1-5)' },
+    { key: 'culinary_experience', message: 'How much do you care about the local culinary experience? (1-5)' },
+    { key: 'historical_significance', message: 'How interested are you in visiting historical landmarks? (1-5)' },
+    { key: 'modern_infrastructure', message: 'How much do you value modern infrastructure and conveniences? (1-5)' },
+    { key: 'budget_friendliness', message: 'How budget-friendly do you need this trip to be? (1-5)' },
+    { key: 'safety_level', message: 'How high is your priority for overall safety in the destination? (1-5)' },
+    { key: 'shopping_opportunities', message: 'How important are shopping opportunities to you? (1-5)' },
+    { key: 'beach_access', message: 'Do you want easy access to beautiful beaches? (1-5)' },
+    { key: 'mountain_access', message: 'How much do you want to explore mountains during your trip? (1-5)' },
+    { key: 'wildlife_viewing', message: 'How interested are you in wildlife viewing and safaris? (1-5)' },
+    { key: 'public_transport_ease', message: 'How crucial is an easy-to-use public transportation system? (1-5)' },
+    { key: 'english_speaking_prevalence', message: 'How important is it that English is widely spoken? (1-5)' },
+    { key: 'weather_warmth', message: 'Do you prefer cold (1) or hot (5) weather?' },
+    { key: 'weather_humidity', message: 'Do you prefer dry (1) or humid (5) climate?' },
+    { key: 'photography_appeal', message: 'How important is the destination for stunning photography? (1-5)' },
+    { key: 'romantic_vibe', message: 'Are you looking for a romantic vibe? (1-5)' },
+    { key: 'solo_travel_friendly', message: 'How important is it that the place is good for solo travelers? (1-5)' },
+    { key: 'nightlife_variety', message: 'Do you want a large variety of nightlife options? (1-5)' },
+    { key: 'wellness_and_spa', message: 'How much do you prioritize wellness retreats and spas? (1-5)' },
+    { key: 'art_and_museums', message: 'Are you looking forward to exploring art galleries and museums? (1-5)' },
+    { key: 'outdoor_sports', message: 'How interested are you in outdoor sports like skiing or surfing? (1-5)' },
+    { key: 'road_trip_potential', message: 'How likely are you to go on scenic road trips? (1-5)' },
+    { key: 'diverse_landscapes', message: 'Do you want to see diverse landscapes in one trip? (1-5)' },
+    { key: 'architectural_beauty', message: 'How important is architectural beauty to you? (1-5)' },
+    { key: 'local_festivals', message: 'Are you interested in attending local festivals and events? (1-5)' }
+];
+
+function loadDestinations() {
+    try {
+        const rawData = fs.readFileSync(DATA_PATH, 'utf-8');
+        return JSON.parse(rawData);
+    } catch (e) {
+        console.error("System Error: Could not load destinations data.");
+        process.exit(1);
+    }
+}
+
+function saveDestinations(data) {
+    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), 'utf-8');
+}
+
+// Selects N random unique elements from an array
+function getRandomQuestions(array, num) {
+    const shuffled = [...array].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+}
+
+async function runTravelEngine() {
+    const destinations = loadDestinations();
+
+    console.log("Welcome to your one and only Travel Decision Companion \n");
+    console.log("Let's figure out your next perfect vacation. I will ask you 10 questions.");
+    console.log("Please answer on a scale from 1 to 5.\n");
+
+    const selectedQuestions = getRandomQuestions(questionsPool, 10);
+
+    // Build inquiries
+    const prompts = selectedQuestions.map(q => ({
+        type: 'list',
+        name: q.key,
+        message: q.message,
+        choices: ['1', '2', '3', '4', '5']
+    }));
+
+    const rawAnswers = await inquirer.prompt(prompts);
+    const userAnswers = {};
+    for (const key in rawAnswers) {
+        userAnswers[key] = parseInt(rawAnswers[key], 10);
+    }
+
+    // Fuzzy matching logic
+    // We only compare the features that we actually asked about.
+    let bestMatch = null;
+    let minDistance = Infinity;
+
+    for (const dest of destinations) {
+        let distance = 0;
+        for (const feature of Object.keys(userAnswers)) {
+            distance += Math.abs(dest.features[feature] - userAnswers[feature]);
+        }
+
+        if (distance < minDistance) {
+            minDistance = distance;
+            bestMatch = dest;
+        }
+    }
+
+    console.log("\n=========================================");
+    console.log("                RESULT                   ");
+    console.log("=========================================");
+    console.log(`Recommended Destination: ${bestMatch.name}`);
+    console.log(`Specialties: ${bestMatch.specialties.join(', ')}`);
+    console.log(`Estimated Budget: $${bestMatch.budget_needed[0]} - $${bestMatch.budget_needed[1]}`);
+    console.log(`Match Score Difference: ${minDistance.toFixed(2)} (Lower is better)`);
+    console.log("=========================================\n");
+
+    // Dynamic Learning & Feedback Loop
+    const { isGoodDecision } = await inquirer.prompt([
+        {
+            type: 'confirm',
+            name: 'isGoodDecision',
+            message: 'Is this a good decision / recommendation for you?',
+            default: true
+        }
+    ]);
+
+    const LEARNING_RATE = 0.2;
+
+    if (isGoodDecision) {
+        console.log(`\nAwesome! I am glad you liked the recommendation.`);
+        console.log(`[Learning Module] Slightly adjusting ${bestMatch.name} to match these preferences closer.`);
+
+        const destToUpdate = destinations.find(d => d.name === bestMatch.name);
+        for (const feature of Object.keys(userAnswers)) {
+            const currentVal = destToUpdate.features[feature];
+            const targetVal = userAnswers[feature];
+            let newVal = currentVal + (targetVal - currentVal) * LEARNING_RATE;
+            destToUpdate.features[feature] = Math.max(1, Math.min(5, Number(newVal.toFixed(2))));
+        }
+        destToUpdate.adjustmentsCount = (destToUpdate.adjustmentsCount || 0) + 1;
+        saveDestinations(destinations);
+
+    } else {
+        console.log(`\nI see. Let's fix that so I can learn from this!`);
+
+        const { preferredDestName } = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'preferredDestName',
+                message: 'Where do you think you should actually travel based on these preferences?'
+            }
+        ]);
+
+        let targetDest = destinations.find(d => d.name.toLowerCase() === preferredDestName.toLowerCase());
+
+        if (targetDest) {
+            console.log(`[Learning Module] Found ${targetDest.name} in database. Adjusting its weights significantly towards your answers.`);
+        } else {
+            console.log(`[Learning Module] New destination detected: ${preferredDestName}. Adding to database!`);
+            // Initialize with default mid values
+            const defaultFeatures = {};
+            for (const q of questionsPool) {
+                defaultFeatures[q.key] = 3.0;
+            }
+
+            targetDest = {
+                name: preferredDestName,
+                specialties: ["User Added Preference"],
+                budget_needed: [1000, 5000],
+                features: defaultFeatures,
+                adjustmentsCount: 0
+            };
+            destinations.push(targetDest);
+        }
+
+        // Apply a stronger learning rate for explicit user preference
+        const STRONG_LEARNING_RATE = 0.5;
+        for (const feature of Object.keys(userAnswers)) {
+            const currentVal = targetDest.features[feature];
+            const targetVal = userAnswers[feature];
+            let newVal = currentVal + (targetVal - currentVal) * STRONG_LEARNING_RATE;
+            targetDest.features[feature] = Math.max(1, Math.min(5, Number(newVal.toFixed(2))));
+        }
+        targetDest.adjustmentsCount = (targetDest.adjustmentsCount || 0) + 1;
+
+        saveDestinations(destinations);
+        console.log("Database updated successfully! I'll be smarter next time.");
+    }
+}
+
+module.exports = { runTravelEngine };
