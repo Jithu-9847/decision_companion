@@ -284,21 +284,23 @@ async function runTravelEngine() {
     let bestMatch = null;
     let minDistance = Infinity;
 
-    for (const dest of destinations) {
+    let candidates = destinations;
+    const locationFiltered = destinations.filter(dest => {
+        const destNameLower = dest.name.toLowerCase();
+        let match = true;
+        if (targetCountry !== 'any' && !destNameLower.includes(targetCountry)) match = false;
+        if (targetState !== 'any' && !destNameLower.includes(targetState)) match = false;
+        return match;
+    });
+
+    if (locationFiltered.length > 0) {
+        candidates = locationFiltered;
+    }
+
+    for (const dest of candidates) {
         let distance = 0;
         for (const feature of Object.keys(userAnswers)) {
             distance += Math.abs(dest.features[feature] - userAnswers[feature]);
-        }
-
-        // Apply penalties for mandatory conditions
-        const destNameLower = dest.name.toLowerCase();
-
-        if (targetCountry !== 'any' && !destNameLower.includes(targetCountry)) {
-            distance += 50; // Heavy penalty for location mismatch
-        }
-
-        if (targetState !== 'any' && !destNameLower.includes(targetState)) {
-            distance += 50; // Heavy penalty for location mismatch
         }
 
         // Approximate cost for the group
@@ -327,9 +329,13 @@ async function runTravelEngine() {
     // Scale the estimated budget for the group size
     const groupMin = bestMatch.budget_needed[0] * personsCount;
     const groupMax = bestMatch.budget_needed[1] * personsCount;
-    console.log(`${chalk.bold.green('💰 Estimated Budget (for ' + personsCount + ' person(s)):')} ₹${groupMin} - ₹${groupMax}`);
 
-    console.log(`${chalk.dim('🎯 Match Score Difference:')} ${minDistance.toFixed(2)} (Lower is better)`);
+    if (totalBudget < groupMin) {
+        console.log(chalk.bold.red(`\nNote: There are no places that you can explore using the given budget.`));
+        console.log(chalk.bold.red(`Even though by your preferences the place I suggest is this, you will need a higher budget.`));
+    }
+
+    console.log(`${chalk.bold.green('💰 Estimated Budget (for ' + personsCount + ' person(s)):')} ₹${groupMin} - ₹${groupMax}`);
     console.log(chalk.bold.magenta("=========================================\n"));
 
     // Dynamic Learning & Feedback Loop

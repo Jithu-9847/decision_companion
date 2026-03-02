@@ -1,9 +1,6 @@
 # Travel Decision Companion - Architecture & Data Flow
 
-
 ## 1. System Architecture
-
-The application is built primarily with Node.js and relies on several key packages and a modular architecture.
 
 ```mermaid
 graph TD
