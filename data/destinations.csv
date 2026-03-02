@@ -1,10 +1,10 @@
 name,specialties,budget_needed_min,budget_needed_max,adventure_level,relaxation_level,cultural_immersion,nightlife,nature_focused,family_friendly,culinary_experience,historical_significance,modern_infrastructure,budget_friendliness,safety_level,shopping_opportunities,beach_access,mountain_access,wildlife_viewing,public_transport_ease,english_speaking_prevalence,weather_warmth,weather_humidity,photography_appeal,romantic_vibe,solo_travel_friendly,nightlife_variety,wellness_and_spa,art_and_museums,outdoor_sports,road_trip_potential,diverse_landscapes,architectural_beauty,local_festivals,adjustmentsCount
 "Kyoto, Japan",Temples|Gardens|Traditional Culture|Matcha,1500,3500,2,5,5,2,4,4,5,5,4,3,5,4,1,3,2,5,2,3,3,5,4,5,2,4,4,2,2,2,5,4,0
-"Swiss Alps, Switzerland",Skiing|Mountains|Scenery|Chocolate,3000,6000,5,4,3,2,5,4,3,2,5,1,5,2,1,5,3,5,4,1,2,5,5,4,2,5,1,5,4,3,3,2,0
+"Swiss Alps, Switzerland",Skiing|Mountains|Scenery|Chocolate,3000,6000,5,4,3,2,5,3.4,3.4,2.4,5,1.8,5,2.2,1,5,3.4,5,4.2,1,2,5,5,4,2,5,1,4.8,4,3,3,2,1
 "Bali, Indonesia",Beaches|Temples|Yoga|Surfing,800,2500,4,5,4,4,5,3,4,3,2,5,3,3,5,3,3,2,4,5,5,5,5,4,4,5,2,4,3,4,3,4,0
 "Paris, France",Art|Cuisine|Romance|Fashion,2000,5000,2,3,5,4,1,3,5,5,4,2,3,5,1,1,1,5,3,3,3,5,5,4,5,3,5,1,2,1,5,3,0
 "Patagonia, Chile/Argentina",Glaciers|Hiking|Wilderness|Photography,2500,5500,5,2,2,1,5,2,3,1,2,2,4,1,1,5,4,1,2,1,3,5,3,3,1,1,1,5,5,5,1,1,0
-"New York City, USA",Broadway|Skyscrapers|Museums|Food diversity,2500,6000,3,1,4,5,1,4,5,4,5,1,3,5,2,1,1,5,5,3,3,5,3,5,5,3,5,1,1,1,5,4,0
+"New York City, USA",Broadway|Skyscrapers|Museums|Food diversity,2500,6000,3.2,1,4,5,1,4,5,4.2,5,1.8,3,4.4,2,1,1.4,5,5,3,3,5,3,5,5,3.2,5,1,1.8,1.8,5,4,1
 Maldives,Luxury resorts|Scuba diving|Overwater bungalows|Relaxation,4000,10000,3,5,1,2,5,4,3,1,3,1,5,1,5,1,4,2,4,5,4,5,5,2,1,5,1,4,1,1,2,1,0
 "Rome, Italy",Ancient ruins|Vatican City|Pasta|Architecture,1500,4000,2,3,5,4,1,4,5,5,3,3,4,4,2,2,1,4,3,4,3,5,5,5,4,2,5,1,3,2,5,3,0
 "Cape Town, South Africa",Table Mountain|Safaris|Wine tasting|Beaches,1800,4500,5,4,4,4,5,4,4,4,3,4,2,3,5,5,5,2,5,4,2,5,4,3,4,3,3,5,5,5,3,3,0
@@ -115,3 +115,8 @@ Giant's Causeway NI,Natural Wonder|Coastline,13000,27000,4,5,4,1,5,5,3,4,3,4,5,2
 "Orlando, Florida, USA",ThemeParks|FamilyEntertainment|WarmWeather|Shopping,2500,6000,4,3,1.5,3,2,5,3.5,1,4.5,2.5,4,4,2,1,2.5,2,5,5,4.5,4,3.5,3,3,3,1.5,3,2,1.5,2.5,2,0
 "Grand Canyon National Park, Arizona, USA",NaturalWonder|Hiking|ScenicViews|Photography,1500,4000,5,3,2,1,5,4,2,3,2.5,3,4,1.5,1,5,4,3,5,3,1,5,4,4,1,1,1,5,5,4,1.5,1,0
 "Maui, Hawaii, USA",Beaches|Volcanoes|Surfing|Snorkeling|Relaxation,4000,10000,4,5,3.5,2.5,5,4.5,4,2.5,3.5,1,4.5,3,5,4,4.5,1.5,5,5,3.5,5,5,3.5,2.5,4.5,2,5,4,5,3,3,0
+"Berlin walls ,Germany",User Added Preference,1000,5000,3,2.5,3,3,3,3,4,3,2.5,3,4,2.5,3,3,3,3,3,3,3,3,3,2,3,3.5,3,3,3,3,3,3,1
+"Barcelona, Spain",Gaudi Architecture|Beach Life|Tapas Culture|Modern Art|Vibrant Nightlife,1500,4000,3,3.5,4.5,5,3,3.4,4.84,4.2,4.5,3,3.5,4.5,4,2,1.5,4.8,4,4,3.6,5,4.6,4.4,5,3,4.84,3,3,3.4,5,4,1
+"Madrid, Spain",Art Museums|Royal Palace|Tapas Culture|Flamenco Shows|Vibrant Nightlife,1400,3800,2.5,3,4.8,5,2,3.8,4.8,4.8,4.8,3.5,4,4.8,1,3,1,5,3.5,3.5,2.5,4.5,4,4.5,5,2.5,5,2.5,4,2.5,4.5,4,0
+"Seville, Spain",Flamenco|Alcázar|Giralda|Orange Trees|Andalusian Cuisine,1200,3000,2,4,5,4,2,4,4.5,5,3.5,4,4.5,3.5,1.5,1.5,1,3.5,3.5,5,2,5,5,4,3.5,3,4,2.5,4.5,2,5,5,0
+"Canary Islands, Spain",Volcanic Landscapes|Beaches|Outdoor Sports|Stargazing|Year-Round Sun,1800,5000,4.5,4.5,3,3.5,5,4.5,3.5,2.5,4,3.5,4.5,3,5,4.5,3.5,3,4.5,5,3,5,4,4,3,4,2,5,5,5,2.5,3,0
