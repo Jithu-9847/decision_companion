@@ -1,67 +1,67 @@
 name,specialties,budget_needed_min,budget_needed_max,adventure_level,relaxation_level,cultural_immersion,nightlife,nature_focused,family_friendly,culinary_experience,historical_significance,modern_infrastructure,budget_friendliness,safety_level,shopping_opportunities,beach_access,mountain_access,wildlife_viewing,public_transport_ease,english_speaking_prevalence,weather_warmth,weather_humidity,photography_appeal,romantic_vibe,solo_travel_friendly,nightlife_variety,wellness_and_spa,art_and_museums,outdoor_sports,road_trip_potential,diverse_landscapes,architectural_beauty,local_festivals,adjustmentsCount
-"Kyoto, Japan",Temples|Gardens|Traditional Culture|Matcha,1500,3500,2,5,5,2,4,4,5,5,4,3,5,4,1,3,2,5,2,3,3,5,4,5,2,4,4,2,2,2,5,4,0
-"Swiss Alps, Switzerland",Skiing|Mountains|Scenery|Chocolate,3000,6000,5,4,3,2,5,3.4,3.4,2.4,5,1.8,5,2.2,1,5,3.4,5,4.2,1,2,5,5,4,2,5,1,4.8,4,3,3,2,1
-"Bali, Indonesia",Beaches|Temples|Yoga|Surfing,800,2500,4,5,4,4,5,3,4,3,2,5,3,3,5,3,3,2,4,5,5,5,5,4,4,5,2,4,3,4,3,4,0
-"Paris, France",Art|Cuisine|Romance|Fashion,2000,5000,2,3,5,4,1,3,5,5,4,2,3,5,1,1,1,5,3,3,3,5,5,4,5,3,5,1,2,1,5,3,0
-"Patagonia, Chile/Argentina",Glaciers|Hiking|Wilderness|Photography,2500,5500,5,2,2,1,5,2,3,1,2,2,4,1,1,5,4,1,2,1,3,5,3,3,1,1,1,5,5,5,1,1,0
-"New York City, USA",Broadway|Skyscrapers|Museums|Food diversity,2500,6000,3.2,1,4,5,1,4,5,4.2,5,1.8,3,4.4,2,1,1.4,5,5,3,3,5,3,5,5,3.2,5,1,1.8,1.8,5,4,1
-Maldives,Luxury resorts|Scuba diving|Overwater bungalows|Relaxation,4000,10000,3,5,1,2,5,4,3,1,3,1,5,1,5,1,4,2,4,5,4,5,5,2,1,5,1,4,1,1,2,1,0
-"Rome, Italy",Ancient ruins|Vatican City|Pasta|Architecture,1500,4000,2,3,5,4,1,4,5,5,3,3,4,4,2,2,1,4,3,4,3,5,5,5,4,2,5,1,3,2,5,3,0
-"Cape Town, South Africa",Table Mountain|Safaris|Wine tasting|Beaches,1800,4500,5,4,4,4,5,4,4,4,3,4,2,3,5,5,5,2,5,4,2,5,4,3,4,3,3,5,5,5,3,3,0
-"Bangkok, Thailand",Street food|Temples|Vibrant nightlife|Markets,800,2500,4,2,5,5,1,3,5,4,3,5,3,5,1,1,1,4,3,5,5,4,2,5,5,5,3,1,2,1,4,4,0
-"Reykjavik, Iceland",Northern Lights|Hot springs|Waterfalls|Glaciers,3000,7000,5,3,3,3,5,4,3,2,4,1,5,2,1,4,3,2,5,1,2,5,4,5,3,5,2,4,5,5,2,2,0
-"Machu Picchu, Peru",Inca ruins|Andes mountains|Hiking|Culture,1500,3500,5,2,5,1,5,2,3,5,2,4,3,2,1,5,3,2,2,2,3,5,3,4,1,2,2,5,2,4,4,3,0
-"Dubai, UAE",Luxury shopping|Modern architecture|Desert safaris|Beaches,2500,8000,4,4,2.2,5,2,5,4,1,5,2,5,5,5,1,1,4,5,5,2,4,2.6,4.2,5,5,1.8,3,3.4,2.2,5,2,1
-"Santorini, Greece",Sunsets|Whitewashed houses|Aegean Sea|Wine,2000,5000,2,5,4,3,4,3,4,3,3,2,5,3,4,2,1,3,4,4,2,5,5,3,3,4,1,2,2,2,5,2,0
-"Cairo, Egypt",Pyramids|Nile River|Ancient History|Bazaars,1000,2500,4,2,5,2,2,3,4,5,2,5,2,4,1,1,1,2,3,5,1,5,2,3,2,2,5,1,1,2,4,2,0
-"ponmudi,Kerala",User Added Preference,1000,5000,4,3,3,3,3,3,3,3,3,3,4,3,3,3,3,3.5,3,3,2,3,3,4,3,3,3,2,3,4,3,4,1
-Goa India,Beaches|Nightlife,1200,3500,5,5,3,5,4,4,5,3,4,3,4,4,5,2,2,3,5,5,5,5,5,5,5,4,3,5,4,4,3,4,0
-Munnar India,Tea|HillStation,900,2500,4,5,3,1,5,5,3,2,3,4,5,2,1,5,4,2,4,2,3,5,5,4,1,4,1,4,5,4,2,3,0
-Jaipur India,Forts|Culture,800,2200,3,3,5,3,2,4,5,5,4,4,4,5,1,1,2,4,4,5,2,5,4,4,3,3,5,2,4,3,5,5,0
-Udaipur India,Lakes|Palaces,1200,3000,2,5,5,3,3,4,4,5,4,3,4,4,1,2,2,3,4,4,2,5,5,4,3,4,4,2,4,3,5,4,0
-Varanasi India,Spiritual|Ghats,600,1800,2,3,5,2,2,3,4,5,3,5,3,4,1,1,1,3,3,5,3,5,2,3,2,2,4,1,3,2,4,5,0
-Leh Ladakh India,Mountains|Adventure,2000,5000,5,3,4,1,5,3,3,4,2,2,4,2,1,5,4,2,3,1,1,5,4,5,1,2,2,5,5,5,3,3,0
-Shimla India,HillStation|Colonial,1000,2600,3,4,3,2,4,5,3,3,4,3,4,4,1,5,2,3,4,2,2,4,4,4,2,3,2,3,5,4,4,3,0
-Manali India,Snow|Adventure,1200,3000,4.4,4.2,2.6,3,5,4,3,2,3,4,4,3.4,1,5,3.4,3,4,1,2,5,5,5,3.4,3,2,5,5,5,3,3,1
-Ooty India,Tea|Lakes,900,2400,3,5,3,1,5,5,3,2,3,4,5,3,1,5,2,3,4,2,3,5,5,4,1,4,2,3,5,4,3,3,0
-Coorg India,Coffee|Nature,1000,2600,4,5,3,1,5,5,4,2,3,4,5,2,1,5,4,2,4,3,4,5,5,4,1,4,1,4,5,5,2,3,0
-Wayanad India,Wildlife|Forest,900,2500,4,4,3,1,5,5,3,2,3,4,5,2,1,5,5,2,4,3,4,5,4,4,1,3,1,4,5,5,2,3,0
-Rishikesh India,Yoga|Rafting,800,2200,5,4,4,2,4,4,3,3,3,5,4,2,1,4,3,3,4,4,3,5,4,5,2,3,2,5,4,4,3,4,0
-Darjeeling India,Tea|Himalaya,1000,2600,3,4,4,2,4,5,3,3,3,4,4,3,1,5,3,2,4,2,3,5,4,4,2,3,2,3,5,4,3,3,0
-Pondicherry India,French|Beach,1000,2800,2,5,4,3,3,4,5,3,4,3,4,4,5,1,2,3,5,5,4,5,5,4,3,4,4,2,4,3,4,4,0
-Andaman India,Island|Diving,2500,6000,5,5,3,2,5,4,4,2,3,3,4,2,5,1,4,2,4,5,5,5,5,5,4,4,2,5,4,5,3,4,0
-Delhi India,Capital|History,700,2500,2,3,5,4,2,4,5,5,5,4,3,5,1,1,1,5,5,4,3,4,3,4,4,3,5,1,3,3,5,5,0
-Mumbai India,City|Nightlife,1200,4000,3,3,4,5,2,4,5,4,5,3,3,5,5,1,1,5,5,5,5,4,4,5,5,4,5,2,3,3,4,5,0
-Bangalore India,Tech|Food,900,3000,3,3,4,4,3,4,5,3,5,4,4,5,1,1,1,5,5,4,4,4,3,5,4,4,4,2,4,3,3,4,0
-Hyderabad India,Biryani|Heritage,800,2600,2,3,5,3,2,4,5,5,4,4,4,5,1,1,1,4,5,5,3,4,3,4,3,3,5,1,3,3,5,5,0
-Chennai India,Temple|Beach,700,2200,2,3,4,3,3,4,5,4,4,5,4,4,4,1,1,4,5,5,5,4,3,4,3,3,4,1,3,3,4,4,0
-Kochi India,Backwaters|Port,900,2500,3,4,5,3,4,5,4,4,4,4,5,4,4,1,2,3,5,5,5,5,4,4,3,4,4,2,4,4,4,5,0
-Alleppey India,Backwaters|Houseboat,1200,3000,2,5,4,1,5,5,4,3,3,4,5,2,5,1,2,2,4,5,5,5,5,4,1,5,2,2,4,5,3,4,0
-Kodaikanal India,Hills|Lake,900,2400,3,5,3,1,5,5,3,2,3,4,5,3,1,5,2,2,4,2,3,5,5,4,1,4,2,3,5,4,3,3,0
-Hampi India,Ruins|Heritage,800,2000,3,3,5,2,3,3,3,5,2,5,4,3,1,1,2,2,4,5,2,5,3,4,2,2,5,2,4,3,5,4,0
-Mysore India,Palace|Culture,700,2200,2,4,5,2,3,5,4,5,4,5,5,4,1,1,1,4,5,4,3,4,4,4,2,3,4,1,3,3,5,5,0
-Kaziranga India,Wildlife|Safari,1200,3500,4,3,3,1,5,4,3,3,2,4,4,2,1,1,5,2,3,4,4,5,3,4,1,2,2,4,4,5,2,4,0
-Sundarbans India,Mangrove|Tiger,1400,3800,4,3,3,1,5,3,3,3,2,4,3,2,1,1,5,2.6,3,5,5,5,2.6,3,1.8,2,1,2.6,3.4,5,1.8,4,1
-Agra India,TajMahal|History,700,2000,2,3,5,2,2,4,4,5,4,5,4,5,1,1,1,4,5,5,2,5,5,4,2,3,5,1,3,3,5,5,0
-Amritsar India,GoldenTemple|Food,600,1800,2,3,5,2,2,4,5,5,4,5,5,4,1,1,1,4,4,4,3,4,3,4,2,3,4,1,3,2,4,5,0
-Jaisalmer India,Desert|Fort,1000,2800,4,3,5,2,3,4,4,5,3,4,4,4,1,1,2,3,4,5,1,5,4,4,2,3,4,3,5,4,5,5,0
-Pushkar India,Temple|Lake,700,2000,2,4,5,2,3,4,4,4,3,5,4,4,1,1,1,3,4,5,1,4,4,4,2,3,3,1,3,3,4,5,0
-Mount Abu India,Hill|Lake,900,2400,3,5,4,1,4,5,3,3,3,4,5,3,1,5,2,3,4,3,2,4,5,4,1,3,2,3,5,4,3,3,0
-Gangtok India,Himalaya|Monastery,1200,3000,4,4,4,2,5,4,3,3,3,4,5,3,1,5,3,2,4,2,3,5,4,4,2,3,2,4,5,5,3,4,0
-Tawang India,Monastery|Mountains,1500,3500,4,4,4,1,5,4,3,3,2,4,5,2,1,5,3,2,3,2,2,5,4,4,1,3,2,4,5,5,3,4,0
-Shillong India,Hills|Waterfalls,1000,2600,4,5,4,2,5,5,4,2,3,4,5,3,1,5,3,3,4,3,4,5,5,4,2,3,2,4,5,5,3,4,0
-Cherrapunji India,Rainfall|Nature,1100,2800,4,4,4,1,5,4,3,2,2,4,5,2,1,5,3,2,3,3,5,5,4,4,1,3,1,4,4,5,2,4,0
-Aizawl India,Hills|Culture,900,2200,3,4,4,1,4,4,3,2,2,5,5,2,1,5,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
-Imphal India,LoktakLake|Culture,900,2300,3,4,4,1,4,4,3,3,2,5,5,2,1,4,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
-Kohima India,WarHeritage|Hills,900,2400,3,4,4,1,4,4,3,4,2,5,5,2,1,4,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
-Itanagar India,Nature|Tribal,900,2200,3,4,4,1,4,4,3,2,2,5,5,2,1,4,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
-Diu India,Beach|Fort,900,2400,3,5,3,2,4,4,4,3,3,4,5,3,5,1,2,3,4,5,5,5,4,4,2,4,3,3,4,4,3,3,0
-Daman India,Beach|Leisure,900,2400,3,5,3,2,4,4,4,3,3,4,5,3,5,1,2,3,4,5,5,5,4,4,2,4,3,3,4,4,3,3,0
-Lakshadweep India,Island|Coral,3000,6500,5,5,3,1,5,4,4,2,2,2,5,2,5,1,4,1,4,5,5,5,5,5,1,5,2,5,4,5,2,4,0
-Mahabalipuram India,Temple|Shore,700,2000,2,4,5,2,3,4,4,5,3,5,4,4,4,1,1,4,5,5,4,5,4,4,2,3,5,1,3,3,5,5,0
-Konark India,SunTemple|Heritage,800,2100,2,3,5,1,3,4,4,5,3,5,4,3,4,1,1,3,4,5,3,5,3,4,1,2,5,1,3,3,5,5,0
-Puri India,Temple|Beach,800,2300,2,4,5,2,3,5,4,5,3,5,4,4,5,1,1,3,4,5,4,5,3,4,2,3,4,1,3,3,4,5,0
-Bhubaneswar India,Temples|Culture,700,2000,2,3,5,2,2,4,4,5,4,5,4,4,1,1,1,4,4,5,3,4,3,4,2,3,5,1,3,3,5,5,0
+"Kyoto, Japan",Temples|Gardens|Traditional Culture|Matcha,124500,290500,2,5,5,2,4,4,5,5,4,3,5,4,1,3,2,5,2,3,3,5,4,5,2,4,4,2,2,2,5,4,0
+"Swiss Alps, Switzerland",Skiing|Mountains|Scenery|Chocolate,249000,498000,5,4,3,2,5,3.4,3.4,2.4,5,1.8,5,2.2,1,5,3.4,5,4.2,1,2,5,5,4,2,5,1,4.8,4,3,3,2,1
+"Bali, Indonesia",Beaches|Temples|Yoga|Surfing,66400,207500,4,5,4,4,5,3,4,3,2,5,3,3,5,3,3,2,4,5,5,5,5,4,4,5,2,4,3,4,3,4,0
+"Paris, France",Art|Cuisine|Romance|Fashion,166000,415000,2,3,5,4,1,3,5,5,4,2,3,5,1,1,1,5,3,3,3,5,5,4,5,3,5,1,2,1,5,3,0
+"Patagonia, Chile/Argentina",Glaciers|Hiking|Wilderness|Photography,207500,456500,5,2,2,1,5,2,3,1,2,2,4,1,1,5,4,1,2,1,3,5,3,3,1,1,1,5,5,5,1,1,0
+"New York City, USA",Broadway|Skyscrapers|Museums|Food diversity,207500,498000,3.2,1,4,5,1,4,5,4.2,5,1.8,3,4.4,2,1,1.4,5,5,3,3,5,3,5,5,3.2,5,1,1.8,1.8,5,4,1
+Maldives,Luxury resorts|Scuba diving|Overwater bungalows|Relaxation,332000,830000,3,5,1,2,5,4,3,1,3,1,5,1,5,1,4,2,4,5,4,5,5,2,1,5,1,4,1,1,2,1,0
+"Rome, Italy",Ancient ruins|Vatican City|Pasta|Architecture,124500,332000,2,3,5,4,1,4,5,5,3,3,4,4,2,2,1,4,3,4,3,5,5,5,4,2,5,1,3,2,5,3,0
+"Cape Town, South Africa",Table Mountain|Safaris|Wine tasting|Beaches,149400,373500,5,4,4,4,5,4,4,4,3,4,2,3,5,5,5,2,5,4,2,5,4,3,4,3,3,5,5,5,3,3,0
+"Bangkok, Thailand",Street food|Temples|Vibrant nightlife|Markets,66400,207500,4,2,5,5,1,3,5,4,3,5,3,5,1,1,1,4,3,5,5,4,2,5,5,5,3,1,2,1,4,4,0
+"Reykjavik, Iceland",Northern Lights|Hot springs|Waterfalls|Glaciers,249000,581000,5,3,3,3,5,4,3,2,4,1,5,2,1,4,3,2,5,1,2,5,4,5,3,5,2,4,5,5,2,2,0
+"Machu Picchu, Peru",Inca ruins|Andes mountains|Hiking|Culture,124500,290500,5,2,5,1,5,2,3,5,2,4,3,2,1,5,3,2,2,2,3,5,3,4,1,2,2,5,2,4,4,3,0
+"Dubai, UAE",Luxury shopping|Modern architecture|Desert safaris|Beaches,207500,664000,4,4,2.2,5,2,5,4,1,5,2,5,5,5,1,1,4,5,5,2,4,2.6,4.2,5,5,1.8,3,3.4,2.2,5,2,1
+"Santorini, Greece",Sunsets|Whitewashed houses|Aegean Sea|Wine,166000,415000,2,5,4,3,4,3,4,3,3,2,5,3,4,2,1,3,4,4,2,5,5,3,3,4,1,2,2,2,5,2,0
+"Cairo, Egypt",Pyramids|Nile River|Ancient History|Bazaars,83000,207500,4,2,5,2,2,3,4,5,2,5,2,4,1,1,1,2,3,5,1,5,2,3,2,2,5,1,1,2,4,2,0
+"ponmudi,Kerala",User Added Preference,83000,415000,4,3,3,3,3,3,3,3,3,3,4,3,3,3,3,3.5,3,3,2,3,3,4,3,3,3,2,3,4,3,4,1
+Goa India,Beaches|Nightlife,99600,290500,5,5,3,5,4,4,5,3,4,3,4,4,5,2,2,3,5,5,5,5,5,5,5,4,3,5,4,4,3,4,0
+Munnar India,Tea|HillStation,74700,207500,4,5,3,1,5,5,3,2,3,4,5,2,1,5,4,2,4,2,3,5,5,4,1,4,1,4,5,4,2,3,0
+Jaipur India,Forts|Culture,66400,182600,3,3,5,3,2,4,5,5,4,4,4,5,1,1,2,4,4,5,2,5,4,4,3,3,5,2,4,3,5,5,0
+Udaipur India,Lakes|Palaces,99600,249000,2,5,5,3,3,4,4,5,4,3,4,4,1,2,2,3,4,4,2,5,5,4,3,4,4,2,4,3,5,4,0
+Varanasi India,Spiritual|Ghats,49800,149400,2,3,5,2,2,3,4,5,3,5,3,4,1,1,1,3,3,5,3,5,2,3,2,2,4,1,3,2,4,5,0
+Leh Ladakh India,Mountains|Adventure,166000,415000,5,3,4,1,5,3,3,4,2,2,4,2,1,5,4,2,3,1,1,5,4,5,1,2,2,5,5,5,3,3,0
+Shimla India,HillStation|Colonial,83000,215800,3,4,3,2,4,5,3,3,4,3,4,4,1,5,2,3,4,2,2,4,4,4,2,3,2,3,5,4,4,3,0
+Manali India,Snow|Adventure,99600,249000,4.4,4.2,2.6,3,5,4,3,2,3,4,4,3.4,1,5,3.4,3,4,1,2,5,5,5,3.4,3,2,5,5,5,3,3,1
+Ooty India,Tea|Lakes,74700,199200,3,5,3,1,5,5,3,2,3,4,5,3,1,5,2,3,4,2,3,5,5,4,1,4,2,3,5,4,3,3,0
+Coorg India,Coffee|Nature,83000,215800,4,5,3,1,5,5,4,2,3,4,5,2,1,5,4,2,4,3,4,5,5,4,1,4,1,4,5,5,2,3,0
+Wayanad India,Wildlife|Forest,74700,207500,4,4,3,1,5,5,3,2,3,4,5,2,1,5,5,2,4,3,4,5,4,4,1,3,1,4,5,5,2,3,0
+Rishikesh India,Yoga|Rafting,66400,182600,5,4,4,2,4,4,3,3,3,5,4,2,1,4,3,3,4,4,3,5,4,5,2,3,2,5,4,4,3,4,0
+Darjeeling India,Tea|Himalaya,83000,215800,3,4,4,2,4,5,3,3,3,4,4,3,1,5,3,2,4,2,3,5,4,4,2,3,2,3,5,4,3,3,0
+Pondicherry India,French|Beach,83000,232400,2,5,4,3,3,4,5,3,4,3,4,4,5,1,2,3,5,5,4,5,5,4,3,4,4,2,4,3,4,4,0
+Andaman India,Island|Diving,207500,498000,5,5,3,2,5,4,4,2,3,3,4,2,5,1,4,2,4,5,5,5,5,5,4,4,2,5,4,5,3,4,0
+Delhi India,Capital|History,58100,207500,2,3,5,4,2,4,5,5,5,4,3,5,1,1,1,5,5,4,3,4,3,4,4,3,5,1,3,3,5,5,0
+Mumbai India,City|Nightlife,99600,332000,3,3,4,5,2,4,5,4,5,3,3,5,5,1,1,5,5,5,5,4,4,5,5,4,5,2,3,3,4,5,0
+Bangalore India,Tech|Food,74700,249000,3,3,4,4,3,4,5,3,5,4,4,5,1,1,1,5,5,4,4,4,3,5,4,4,4,2,4,3,3,4,0
+Hyderabad India,Biryani|Heritage,66400,215800,2,3,5,3,2,4,5,5,4,4,4,5,1,1,1,4,5,5,3,4,3,4,3,3,5,1,3,3,5,5,0
+Chennai India,Temple|Beach,58100,182600,2,3,4,3,3,4,5,4,4,5,4,4,4,1,1,4,5,5,5,4,3,4,3,3,4,1,3,3,4,4,0
+Kochi India,Backwaters|Port,74700,207500,3,4,5,3,4,5,4,4,4,4,5,4,4,1,2,3,5,5,5,5,4,4,3,4,4,2,4,4,4,5,0
+Alleppey India,Backwaters|Houseboat,99600,249000,2,5,4,1,5,5,4,3,3,4,5,2,5,1,2,2,4,5,5,5,5,4,1,5,2,2,4,5,3,4,0
+Kodaikanal India,Hills|Lake,74700,199200,3,5,3,1,5,5,3,2,3,4,5,3,1,5,2,2,4,2,3,5,5,4,1,4,2,3,5,4,3,3,0
+Hampi India,Ruins|Heritage,66400,166000,3,3,5,2,3,3,3,5,2,5,4,3,1,1,2,2,4,5,2,5,3,4,2,2,5,2,4,3,5,4,0
+Mysore India,Palace|Culture,58100,182600,2,4,5,2,3,5,4,5,4,5,5,4,1,1,1,4,5,4,3,4,4,4,2,3,4,1,3,3,5,5,0
+Kaziranga India,Wildlife|Safari,99600,290500,4,3,3,1,5,4,3,3,2,4,4,2,1,1,5,2,3,4,4,5,3,4,1,2,2,4,4,5,2,4,0
+Sundarbans India,Mangrove|Tiger,116200,315400,4,3,3,1,5,3,3,3,2,4,3,2,1,1,5,2.6,3,5,5,5,2.6,3,1.8,2,1,2.6,3.4,5,1.8,4,1
+Agra India,TajMahal|History,58100,166000,2,3,5,2,2,4,4,5,4,5,4,5,1,1,1,4,5,5,2,5,5,4,2,3,5,1,3,3,5,5,0
+Amritsar India,GoldenTemple|Food,49800,149400,2,3,5,2,2,4,5,5,4,5,5,4,1,1,1,4,4,4,3,4,3,4,2,3,4,1,3,2,4,5,0
+Jaisalmer India,Desert|Fort,83000,232400,4,3,5,2,3,4,4,5,3,4,4,4,1,1,2,3,4,5,1,5,4,4,2,3,4,3,5,4,5,5,0
+Pushkar India,Temple|Lake,58100,166000,2,4,5,2,3,4,4,4,3,5,4,4,1,1,1,3,4,5,1,4,4,4,2,3,3,1,3,3,4,5,0
+Mount Abu India,Hill|Lake,74700,199200,3,5,4,1,4,5,3,3,3,4,5,3,1,5,2,3,4,3,2,4,5,4,1,3,2,3,5,4,3,3,0
+Gangtok India,Himalaya|Monastery,99600,249000,4,4,4,2,5,4,3,3,3,4,5,3,1,5,3,2,4,2,3,5,4,4,2,3,2,4,5,5,3,4,0
+Tawang India,Monastery|Mountains,124500,290500,4,4,4,1,5,4,3,3,2,4,5,2,1,5,3,2,3,2,2,5,4,4,1,3,2,4,5,5,3,4,0
+Shillong India,Hills|Waterfalls,83000,215800,4,5,4,2,5,5,4,2,3,4,5,3,1,5,3,3,4,3,4,5,5,4,2,3,2,4,5,5,3,4,0
+Cherrapunji India,Rainfall|Nature,91300,232400,4,4,4,1,5,4,3,2,2,4,5,2,1,5,3,2,3,3,5,5,4,4,1,3,1,4,4,5,2,4,0
+Aizawl India,Hills|Culture,74700,182600,3,4,4,1,4,4,3,2,2,5,5,2,1,5,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
+Imphal India,LoktakLake|Culture,74700,190900,3,4,4,1,4,4,3,3,2,5,5,2,1,4,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
+Kohima India,WarHeritage|Hills,74700,199200,3,4,4,1,4,4,3,4,2,5,5,2,1,4,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
+Itanagar India,Nature|Tribal,74700,182600,3,4,4,1,4,4,3,2,2,5,5,2,1,4,2,2,3,3,4,4,4,4,1,3,2,3,4,4,2,3,0
+Diu India,Beach|Fort,74700,199200,3,5,3,2,4,4,4,3,3,4,5,3,5,1,2,3,4,5,5,5,4,4,2,4,3,3,4,4,3,3,0
+Daman India,Beach|Leisure,74700,199200,3,5,3,2,4,4,4,3,3,4,5,3,5,1,2,3,4,5,5,5,4,4,2,4,3,3,4,4,3,3,0
+Lakshadweep India,Island|Coral,249000,539500,5,5,3,1,5,4,4,2,2,2,5,2,5,1,4,1,4,5,5,5,5,5,1,5,2,5,4,5,2,4,0
+Mahabalipuram India,Temple|Shore,58100,166000,2,4,5,2,3,4,4,5,3,5,4,4,4,1,1,4,5,5,4,5,4,4,2,3,5,1,3,3,5,5,0
+Konark India,SunTemple|Heritage,66400,174300,2,3,5,1,3,4,4,5,3,5,4,3,4,1,1,3,4,5,3,5,3,4,1,2,5,1,3,3,5,5,0
+Puri India,Temple|Beach,66400,190900,2,4,5,2,3,5,4,5,3,5,4,4,5,1,1,3,4,5,4,5,3,4,2,3,4,1,3,3,4,5,0
+Bhubaneswar India,Temples|Culture,58100,166000,2,3,5,2,2,4,4,5,4,5,4,4,1,1,1,4,4,5,3,4,3,4,2,3,5,1,3,3,5,5,0
 London City Center UK,Urban Tourism|Landmarks|Shopping,15000,30000,2,3,5,5,2,5,5,5,5,2,5,5,1,1,1,5,5,2,4,5,4,5,5,4,5,2,3,3,5,5,0
 Buckingham Palace London,Royal Palace|History,14000,26000,1,3,5,2,2,5,4,5,5,2,5,4,1,1,1,5,5,2,4,5,4,5,2,3,5,1,2,2,5,4,0
 Tower of London UK,Historic Fortress|Museum,15000,28000,2,3,5,2,2,5,4,5,5,2,5,4,1,1,1,5,5,2,4,5,4,5,2,3,5,1,2,2,5,4,0
@@ -111,12 +111,12 @@ Cardiff Wales,Castle|Waterfront|Culture,13000,26000,3,4,4,3,3,5,4,4,4,4,5,4,1,2,
 Snowdonia Wales,Mountains|Hiking|Nature,12000,25000,5,5,4,1,5,4,3,3,3,4,5,2,1,5,4,2,5,2,4,5,5,5,1,3,2,5,5,5,3,4,0
 Belfast Northern Ireland,Titanic|History|City,13000,26000,3,3,4,4,2,4,4,4,4,4,5,4,1,1,1,4,5,3,4,4,4,5,4,3,4,2,3,3,4,4,0
 Giant's Causeway NI,Natural Wonder|Coastline,13000,27000,4,5,4,1,5,5,3,4,3,4,5,2,5,3,3,2,5,2,4,5,5,5,1,3,2,4,5,5,4,4,0
-"New York City, USA",BroadwayShows|Museums|Shopping|DiverseCuisine,3000,8000,3.5,2,4.5,5,1.5,4,5,4,5,1.5,3.5,5,1,1,1,5,5,3,3,5,4,4.5,5,3.5,5,2,1,2,4.5,4,0
-"Orlando, Florida, USA",ThemeParks|FamilyEntertainment|WarmWeather|Shopping,2500,6000,4,3,1.5,3,2,5,3.5,1,4.5,2.5,4,4,2,1,2.5,2,5,5,4.5,4,3.5,3,3,3,1.5,3,2,1.5,2.5,2,0
-"Grand Canyon National Park, Arizona, USA",NaturalWonder|Hiking|ScenicViews|Photography,1500,4000,5,3,2,1,5,4,2,3,2.5,3,4,1.5,1,5,4,3,5,3,1,5,4,4,1,1,1,5,5,4,1.5,1,0
-"Maui, Hawaii, USA",Beaches|Volcanoes|Surfing|Snorkeling|Relaxation,4000,10000,4,5,3.5,2.5,5,4.5,4,2.5,3.5,1,4.5,3,5,4,4.5,1.5,5,5,3.5,5,5,3.5,2.5,4.5,2,5,4,5,3,3,0
-"Berlin walls ,Germany",User Added Preference,1000,5000,3,2.5,3,3,3,3,4,3,2.5,3,4,2.5,3,3,3,3,3,3,3,3,3,2,3,3.5,3,3,3,3,3,3,1
-"Barcelona, Spain",Gaudi Architecture|Beach Life|Tapas Culture|Modern Art|Vibrant Nightlife,1500,4000,3,3.5,4.5,5,3,3.4,4.84,4.2,4.5,3,3.5,4.5,4,2,1.5,4.8,4,4,3.6,5,4.6,4.4,5,3,4.84,3,3,3.4,5,4,1
-"Madrid, Spain",Art Museums|Royal Palace|Tapas Culture|Flamenco Shows|Vibrant Nightlife,1400,3800,2.5,3,4.8,5,2,3.8,4.8,4.8,4.8,3.5,4,4.8,1,3,1,5,3.5,3.5,2.5,4.5,4,4.5,5,2.5,5,2.5,4,2.5,4.5,4,0
-"Seville, Spain",Flamenco|Alcázar|Giralda|Orange Trees|Andalusian Cuisine,1200,3000,2,4,5,4,2,4,4.5,5,3.5,4,4.5,3.5,1.5,1.5,1,3.5,3.5,5,2,5,5,4,3.5,3,4,2.5,4.5,2,5,5,0
-"Canary Islands, Spain",Volcanic Landscapes|Beaches|Outdoor Sports|Stargazing|Year-Round Sun,1800,5000,4.5,4.5,3,3.5,5,4.5,3.5,2.5,4,3.5,4.5,3,5,4.5,3.5,3,4.5,5,3,5,4,4,3,4,2,5,5,5,2.5,3,0
+"New York City, USA",BroadwayShows|Museums|Shopping|DiverseCuisine,249000,664000,3.5,2,4.5,5,1.5,4,5,4,5,1.5,3.5,5,1,1,1,5,5,3,3,5,4,4.5,5,3.5,5,2,1,2,4.5,4,0
+"Orlando, Florida, USA",ThemeParks|FamilyEntertainment|WarmWeather|Shopping,207500,498000,4,3,1.5,3,2,5,3.5,1,4.5,2.5,4,4,2,1,2.5,2,5,5,4.5,4,3.5,3,3,3,1.5,3,2,1.5,2.5,2,0
+"Grand Canyon National Park, Arizona, USA",NaturalWonder|Hiking|ScenicViews|Photography,124500,332000,5,3,2,1,5,4,2,3,2.5,3,4,1.5,1,5,4,3,5,3,1,5,4,4,1,1,1,5,5,4,1.5,1,0
+"Maui, Hawaii, USA",Beaches|Volcanoes|Surfing|Snorkeling|Relaxation,332000,830000,4,5,3.5,2.5,5,4.5,4,2.5,3.5,1,4.5,3,5,4,4.5,1.5,5,5,3.5,5,5,3.5,2.5,4.5,2,5,4,5,3,3,0
+"Berlin walls ,Germany",User Added Preference,83000,415000,3,2.5,3,3,3,3,4,3,2.5,3,4,2.5,3,3,3,3,3,3,3,3,3,2,3,3.5,3,3,3,3,3,3,1
+"Barcelona, Spain",Gaudi Architecture|Beach Life|Tapas Culture|Modern Art|Vibrant Nightlife,124500,332000,3,3.5,4.5,5,3,3.4,4.84,4.2,4.5,3,3.5,4.5,4,2,1.5,4.8,4,4,3.6,5,4.6,4.4,5,3,4.84,3,3,3.4,5,4,1
+"Madrid, Spain",Art Museums|Royal Palace|Tapas Culture|Flamenco Shows|Vibrant Nightlife,116200,315400,2.5,3,4.8,5,2,3.8,4.8,4.8,4.8,3.5,4,4.8,1,3,1,5,3.5,3.5,2.5,4.5,4,4.5,5,2.5,5,2.5,4,2.5,4.5,4,0
+"Seville, Spain",Flamenco|Alcázar|Giralda|Orange Trees|Andalusian Cuisine,99600,249000,2,4,5,4,2,4,4.5,5,3.5,4,4.5,3.5,1.5,1.5,1,3.5,3.5,5,2,5,5,4,3.5,3,4,2.5,4.5,2,5,5,0
+"Canary Islands, Spain",Volcanic Landscapes|Beaches|Outdoor Sports|Stargazing|Year-Round Sun,149400,415000,4.5,4.5,3,3.5,5,4.5,3.5,2.5,4,3.5,4.5,3,5,4.5,3.5,3,4.5,5,3,5,4,4,3,4,2,5,5,5,2.5,3,0

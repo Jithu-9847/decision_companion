@@ -1,12 +1,7 @@
 # Travel Decision Companion
 
-An interactive, AI-powered CLI application that helps users decide on their next travel destination using Fuzzy Logic, Adaptive Learning, and Dynamic AI Generation (Google Gemini).
+An interactive CLI application that helps users decide on their next travel destination using Fuzzy Logic, Adaptive Learning, and Dynamic AI Generation (Google Gemini).
 
-## Features
-- **Fuzzy Logic Engine:** Calculates the mathematical ("Manhattan Distance") difference between user preferences and destination features across a sliding 1-5 scale for 30 distinct categories.
-- **Dynamic Questioning:** Asks 10 random, non-repeating preference questions out of a master pool of 30, keeping the quiz fresh every run.
-- **Adaptive Learning Loop:** If a user disagrees with the final recommendation, the system asks for their preferred destination and permanently alters the internal CSV dataset weights so that the engine gets "smarter" based on mass user feedback.
-- **Dynamic AI Fetching:** If a user requests a Country or State that is entirely missing from the local dataset, the system acts as an autonomous agent by calling the Google Gemini API to dynamically research, format, and permanently inject new destinations tailored to that location.
 
 ## Prerequisites
 - **Node.js**: Ensure you have Node.js installed (v18+ recommended).
@@ -32,6 +27,61 @@ An interactive, AI-powered CLI application that helps users decide on their next
    GEMINI_API_KEY=your_actual_api_key_here
    ```
    *(Note: If you don't create this file, the CLI will safely prompt you to manually paste your key during runtime if it needs to fetch new destinations).*
+4. **Gemini API Setup Guide**
+
+This project uses **Google Gemini AI** to dynamically generate travel destinations when requested locations are not available in the dataset.
+
+
+## Step 1: Create Gemini API Key
+
+1. Open Google AI Studio:
+   https://aistudio.google.com/app/apikey
+
+2. Sign in using your Google account.
+
+3. Click **Create API Key**.
+
+4. Select **Create API key in new project**.
+
+5. Copy the generated API key.
+
+Example:
+```
+AIzaSyXXXXXXXXXXXXXXXXXXXX
+```
+
+⚠️ Keep your API key private.
+
+
+## Step 2: Add API Key to Project
+
+Create a file named `.env` in the project root directory.
+
+Add the following:
+
+```
+GEMINI_API_KEY=YOUR_API_KEY_HERE
+```
+
+Example:
+```
+GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXX
+```
+
+## Alternative: Temporary API Key (For Evaluators)
+
+If you are unable to create a Gemini API key, you may use the **temporary API key** provided along with the project submission email.
+
+The API key is shared as an email attachment protected with the following password:
+
+```
+Task@2026_Pass
+```
+
+⚠️ Note:
+- This key is provided **only for project evaluation purposes**.
+- The key will be revoked after evaluation.
+- Please do not redistribute or reuse the key.
 
 ## How to Run
 

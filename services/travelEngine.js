@@ -186,13 +186,13 @@ async function runTravelEngine() {
                 const ai = new GoogleGenAI({ apiKey: apiKey });
 
                 const promptText = `
-                    I need 10 popular tourist destinations in ${targetState !== 'any' ? targetState : ''} ${targetCountry !== 'any' ? targetCountry : ''}.
+                    I need 4 popular tourist destinations in ${targetState !== 'any' ? targetState : ''} ${targetCountry !== 'any' ? targetCountry : ''}.
                     Respond ONLY with a valid JSON array of objects. Do NOT use markdown code blocks like \`\`\`json. Just the raw JSON.
                     Each object must have exactly these keys:
                     - "name": string (e.g., "City Name, Country")
                     - "specialties": string (e.g., "Item1|Item2|Item3" - separated by pipes, no spaces around pipes)
-                    - "budget_needed_min": number (in INR, reasonable minimum group budget)
-                    - "budget_needed_max": number (in INR, reasonable maximum group budget)
+                    - "budget_needed_min": number (in INR, reasonable minimum group budget in Rupees)
+                    - "budget_needed_max": number (in INR, reasonable maximum group budget in Rupees)
                     And the following 30 feature keys with numerical values from 1.0 to 5.0 (decimals allowed, e.g. 3.5):
                     ${questionsPool.map(q => `"${q.key}"`).join(', ')}.
                     Make the features realistic for the destination.

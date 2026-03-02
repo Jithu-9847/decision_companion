@@ -1,7 +1,21 @@
 # Build Process
 
 ## How I Started
-The project began with a core objective: to build an interactive, command-line "Travel Decision Companion." The initial concept involved asking users a series of preference questions and matching them to a static JSON dataset (`destinations.json`) containing around 15 predefined travel locations. I started by defining a schema where each destination would be scored across 30 granular features (e.g., adventure, relaxation, nightlife) on a 1-5 scale, allowing for nuanced mathematical comparisons using fuzzy logic.
+
+The development process began with researching how a decision-making companion system could effectively assist users in choosing between multiple options. The initial objective was to understand how structured computational models could replicate human decision-making behavior. To explore this idea, I first developed a Python-based prototype that utilized the concept of decision trees for automated decision support.
+
+In the initial implementation, a static decision tree was manually constructed where each node represented a question presented to the user, and its child nodes represented possible responses. Based on the user’s selection, the system traversed through the tree sequentially until a leaf node was reached. The value stored in the leaf node was considered the final decision output. This approach successfully demonstrated guided decision flow; however, it lacked flexibility since every possible decision path had to be predefined in advance.
+
+To introduce adaptability into the system, Gemini API integration was later added to dynamically generate decision trees based on user queries. While this significantly improved the system’s ability to handle diverse decision scenarios, it introduced serious performance limitations. Each time a user requested a decision, the system was required to generate and retrieve an entire decision tree structure through the API, resulting in increased latency and inefficient execution. Due to these scalability challenges, this approach was ultimately discontinued.
+
+Following this evaluation, the system architecture was redesigned and the project was migrated from Python to JavaScript to better support interactive and real-time environments. During this redesign phase, the decision-making strategy shifted from rule-based trees to a probabilistic learning approach. The Random Forest algorithm was selected because of its efficiency, robustness, and capability to produce reliable outcomes through probability aggregation rather than rigid logical traversal.
+
+The project was then restarted with a refined objective: to develop an interactive command-line **Travel Decision Companion** capable of understanding user preferences and recommending suitable travel destinations. The system was designed to interactively collect user preferences and compare them against a structured dataset (`destinations.json`) containing predefined travel locations. Each destination was modeled using approximately thirty detailed attributes—such as adventure level, relaxation potential, nightlife availability, cultural immersion, and nature focus—rated on a standardized scale from one to five. This structured scoring framework enabled nuanced mathematical comparison using fuzzy logic principles, allowing the system to generate more context-aware and human-like travel recommendations.
+
+## Reason for using Fuzzy Logic
+`Fuzzy logic is used in decision-making systems to handle uncertainty, ambiguity, and imprecise data, allowing computers to mimic human-like reasoning rather than relying on strict, binary (0 or 1) logic. It is highly effective for controlling complex, non-linear systems by using "if-then" rules to interpret vague inputs`
+
+So i thing it will be good for my decision making companion
 
 ## How My Thinking Evolved
 As development progressed, it became obvious that a completely static JSON dataset was too rigid and hard for a non-developer to maintain. I shifted my thinking in a few key areas:
